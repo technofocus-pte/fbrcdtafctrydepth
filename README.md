@@ -1,2 +1,2 @@
 # azdtafctrydepth
-Azure Data Factory
+Fabric Data Factory
