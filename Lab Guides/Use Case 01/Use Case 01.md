@@ -46,18 +46,22 @@ To create a workspace:
     select **+New Item** and Look for the **Sample warehouse** card
     under Store Data section**.**
 
-2.  ![](./media/image6.png)On the **New warehouse** dialog, provide a
+    ![](./media/image6.png)
+    
+2.  On the **New warehouse** dialog, provide a
     name for your warehouse as **Warehouse-DF** and click on the
     **Create** button.
 
-3.  ![](./media/image7.png)The create action creates a new Warehouse and
+    [](./media/image7.png)
+    
+3.  The create action creates a new Warehouse and
     start loading sample data into it. The data loading takes few
     minutes to complete.
 
 4.  On completion of loading sample data, the warehouse opens with
     sample data loaded into tables and views to query.
 
-![](./media/image8.png)
+    ![](./media/image8.png)
 
 ## Exercise 2 - Create a Copy job in Data Factory
 
@@ -68,7 +72,7 @@ In this exercise, you will learn how to:
 - Set up a **Copy activity pipeline** using the intuitive, code-free
   interface
 
-- Customize settings like **column mappings, data filters, and file
+- Customise settings like **column mappings, data filters, and file
   formats**
 
 ### **Task-1: Create a Copy job in Data Factory**
