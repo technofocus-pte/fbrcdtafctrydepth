@@ -48,9 +48,11 @@ To create a workspace:
 2.  In the **Create a workspace** tab, enter the following details and
     click on the **Apply** button.
 
-|Name |Enter a unique name. for example – DataFactory_Fabric 	|
-|Advanced |Under License mode, select Trial	|
-|Default storage format |Small semantic model storage format	|
+    |   |    |
+    |-----|-----|
+    |Name|	Enter a unique name. for example – DataFactory_Fabric|
+    |Advanced	|Under License mode, select Trial|
+    |Default storage format	|Small semantic model storage format|
 
 ![](./media/image2.png)
 
