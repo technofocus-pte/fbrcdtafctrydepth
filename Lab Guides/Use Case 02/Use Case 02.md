@@ -209,8 +209,6 @@ Follow these steps to monitor a copy job in the copy job panel.
     data source by selecting **Create a new connection** under
     the **Connection** drop-down.
 
-&nbsp;
-
 -   Specify the **storage account** name in the
     **Account name or URL field**. After selecting **Create new
     connection** with your storage account specified, you only need to
