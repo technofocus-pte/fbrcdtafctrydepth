@@ -1,14 +1,16 @@
 # Use Case 2 – Build a data pipeline to ingest data from Azure Blob Storage to Lakehouse
 
+**Overview**
+
 Contoso faced difficulties in integrating raw CSV data from its
 distributed retail stores, which was periodically uploaded to Azure Blob
 Storage. Their existing ETL process was manual, time-consuming, and
-error-prone. The analytics team needed a scalable, automated way to
+error prone. The analytics team needed a scalable, automated way to
 ingest this data into a centralized Lakehouse to support downstream
 Power BI reports and AI workloads. Contoso faced difficulties in
 integrating raw CSV data from its distributed retail stores, which was
 periodically uploaded to Azure Blob Storage. Their existing ETL process
-was manual, time-consuming, and error-prone. The analytics team needed a
+was manual, time-consuming, and error prone. The analytics team needed a
 scalable, automated way to ingest this data into a centralized Lakehouse
 to support downstream Power BI reports and AI workloads.
 
@@ -26,78 +28,103 @@ Storage source to a Lakehouse destination.
 Follow these steps in Azure portal to create a Blob storage account:
 
 1.  Log in to **Azure Portal** by clicking on this url -
-    [**https://portal.azure.com**](https://portal.azure.com) (Please
-    make sure you have a subscription before doing all this. If you
-    created a free account for the first time, you’ll already have a
-    FREE TRIAL subscription for 1 month).
+    +++**<https://portal.azure.com>+++** (Please make sure you have a
+    subscription before doing all this. If you created a free account
+    for the first time, you’ll already have a FREE TRIAL subscription
+    for 1 month).
 
-2.  ![](./media/image1.png)To create a Blob Storage, first you have to
+2.  To create a Blob Storage, first you have to
     set up the ‘Storage Account’.  To create one, log in to the Azure
     portal, then click on **Storage Accounts**.
 
-3.  ![](./media/image2.png) The following screen will appear and then
+![](./media/image1.png)
+
+3.  The following screen will appear and then
     click on **+** **Create** to proceed further.
+
+![](./media/image2.png)
 
 4.  It will take you to the next page and asks you to fill in the
     following details:
 
-- **Subscription**: Select your subscription.
+    |   |    |
+    |-----|-----|
+    |Subscription|	Select your subscription.|
+    |Resource group	|Create a new resource group, by clicking on **Create** **new**.|
+    |Storage account name|	Specify the name of the account **dpstorage0910**.|
+    |Region|	Specify your region or location|
+    |Primary service|	Select primary service as **Azure Blob Storage or Azure Data Lake Storage Gen 2.|
+    |Performance|	Select **Standard** (general-purpose v2 account)|
+    |Redundancy|	Select **Geo-redundant storage (GRS)** for this lab|
 
-- **Resource** **group**: Create a new resource group, by clicking on
-  **Create** **new**.
-
-- **Storage** **account** **name**: Specify the name of the account.
-
-- **Region**: Specify your region or location.
-
-- **Primary service**: Select primary service as **Azure Blob Storage or
-  Azure Data Lake Storage Gen 2.**
-
-- **Performance**: Select **Standard** (general-purpose v2 account).
-
-- **Redundancy**: Select **Geo-redundant storage (GRS)** for this lab.
-
-> ![](./media/image3.png) After completing the listed fields, click on
+>  After completing the listed fields, click on
 > **Review + create**.
+
+![](./media/image3.png)
 
 5.  Review all the details and click on **Create**.
 
 ![](./media/image4.png)
 
-6.  ![](./media/image5.png)When you click on **Create**, it will
+6.  When you click on **Create**, it will
     navigate you to the next screen that shows the deployment status.
     After Select **Go to resource**.
 
-7.  ![](./media/image6.png)The following screen will appear, showing an
+![](./media/image5.png)
+
+7.  The following screen will appear, showing an
     **Overview** of the created Storage Account. Expand **Data Storage**
     from the left navigation pane and click on **Containers** option.
 
-8.  ![](./media/image7.png)To create a new Container, click on **+
+![](./media/image6.png)
+
+8.  To create a new Container, click on **+
     Container**.
 
-9.  ![](./media/image8.png)In the **New container** page, enter a name
+![](./media/image7.png)
+
+9.  In the **New container** page, enter a name
     for the container i.e., **blobstorage-container** and click on
     **Create**.
 
-10. ![](./media/image9.png)Hence, the blob storage is **successfully**
+![](./media/image8.png)
+
+10. Hence, the blob storage is **successfully**
     **created** as we can see container **blobstorage-container**
     appears under the storage.
 
-11. ![](./media/image10.png)To upload a **Blob object**, navigate to the
+![](./media/image9.png)
+
+11. To upload a **Blob object**, navigate to the
     **overview** section of the **storage account** and click on
     **Upload**.
 
-12. ![](./media/image11.png)In the **Upload blob** page, browse for the
-    [**moviesDB2.csv**](Lab-File%20(UseCase-3)/moviesDB2.csv) file and
-    select the existing container **blobstorage-container** that we have
-    just created in the previous steps. Click on **Upload**.
+![](./media/image10.png)
 
-13. ![](./media/image12.png)Again, navigate to the **container** **tab**
+12. Navigate to the **C:\LabFiles** and
+    browse for the lab file named as **moviesDB2.csv**. Click on
+    **Open** button to upload.
+
+![A screenshot of a computer Description automatically
+    generated](./media/image11.png)
+
+13. In the **Upload blob** page, browse for the **moviesDB2.csv** file
+    and select the existing container **blobstorage-container** that we
+    have just created in the previous steps. Click on **Upload**.
+
+![A screenshot of a computer Description automatically
+generated](./media/image12.png)
+
+14. Again, navigate to the **container** **tab**
     in your storage account (located under data storage in the left
     navigation pane).
 
-14. ![](./media/image13.png)There you’ll see the **uploaded file** in
-    the container tab.
+![](./media/image13.png)
+
+15. There you’ll see the **uploaded file** in the container tab.
+
+![A screenshot of a computer Description automatically
+generated](./media/image14.png)
 
 ## Exercise 2 - Create a Data pipeline
 
@@ -110,38 +137,44 @@ pipeline within the workspace.
 
 To create a workspace:
 
-1.  From left pane, select **Workspaces** \> **New workspace**.
+1.  From left pane,
+    select **Workspaces** \> **New workspace**.
 
-![](./media/image14.png)
+![](./media/image15.png)
 
-2.  In the **Create a workspace** tab, enter the following details and
-    click on the **Apply** button.
+2.  In the Create a workspace tab, enter the following details and click
+    on the **Apply** button.
 
-    - Give the workspace a unique name (mandatory).
+    |   |    |
+    |-----|-----|
+    |Workspace Name|	+++DataPipeline-DF+++|
+    |Semantic Model storage format|	mall semantic model storage format|
+    |Advanced	|Under License mode, select Trial|
 
-    &nbsp;
+![](./media/image16.png)
 
-    - Provide a description of the workspace (optional).
+![](./media/image17.png)
 
-    &nbsp;
+3.  You’ll be navigated to the workspace page.
 
-    - ![](./media/image15.png)![](./media/image16.png)Assign the
-      workspace to a domain (optional).
-
-3.  ![](./media/image17.png)You’ll be navigated to the workspace page.
+![](./media/image18.png)
 
 ### **Task-2: Create a Data Pipeline**
 
-1.  ![](./media/image18.png)Click on **+ New item** and select **Data
-    pipeline** card.
-
-2.  Provide a name to the pipeline and select **Create.**
+1.  Click on **+ New item** and select Data
+    pipeline card.
 
 ![](./media/image19.png)
 
-3.  You’ll be navigated to the **Build a data pipeline** page.
+2.  Provide a name to the pipeline and select **Create**.
 
-![](./media/image20.png)
+![A screenshot of a computer Description automatically
+generated](./media/image20.png)
+
+3.  You’ll be navigated to the **Build a data
+    pipeline** page.
+
+![](./media/image21.png)
 
 ## Exercise 3 – Copy data using the Copy Assistant
 
@@ -158,17 +191,19 @@ Storage to a Lakehouse.
 
 Follow these steps to monitor a copy job in the copy job panel.
 
-1.  ![](./media/image21.png)Select **Copy data assistant** on the canvas
+1.  Select **Copy data assistant** on the canvas
     to open the **copy assistant** tool to get started. Or Select **Use
     copy assistant** from the **Copy data** drop-down list under
     the **Activities** tab on the ribbon.
 
+![](./media/image22.png)
+
 ### **Task-2: Configure your source**
 
-1.  Type *blob* in the selection filter, then select **Azure Blobs** and
-    select **Next**.
+1.  Type **blob** in the selection filter, then
+    select **Azure Blobs** and select **Next**.
 
-> ![](./media/image22.png)
+![](./media/image23.png)
 
 2.  Provide your account name or URL and create a connection to your
     data source by selecting **Create a new connection** under
@@ -176,56 +211,64 @@ Follow these steps to monitor a copy job in the copy job panel.
 
 &nbsp;
 
-1.  ![](./media/image23.png)Specify the **storage account** name in the
+-   Specify the **storage account** name in the
     **Account name or URL field**. After selecting **Create new
     connection** with your storage account specified, you only need to
     fill in the **Authentication kind**. In this lab, we preferred the
     **Account key**.
 
-2.  To find your **Azure Blob Storage account key**, navigate to your
+![](./media/image24.png)
+
+-   To find your **Azure Blob Storage account key**, navigate to your
     storage account in the Azure portal, go to **Security + networking**
     and then select **Access keys**. Copy the **Key1 by first clicking
     on it and then, a copy button will be displayed to copy the key**
-    and paste it into the **Connect to data**
-    ![](./media/image24.png)**source** page in the Fabric portal.
-
-3.  Once your connection is **created successfully**, you only need to
-    select **Next** to Connect to a data source.
-
-&nbsp;
-
-3.  Choose the file moviesDB2.csv in the source configuration to
-    preview, and then select **Next**.
+    and paste it into the **Connect to data source** page in the Fabric
+    portal.
 
 ![](./media/image25.png)
 
+-   Once your connection is **created successfully**, you only need to
+    select **Next** to Connect to a data source.
+
+3.  Choose the file **moviesDB2.csv** in the
+    source configuration to preview, and then select Next.
+
+![](./media/image26.png)
+
 ### **Task-3: Configure your destination**
 
-1.  ![](./media/image26.png)Select **Lakehouse**.
+1.  Select **Lakehouse**.
 
-2.  ![](./media/image27.png)Provide a name for the new Lakehouse. Then
+![](./media/image27.png)
+
+2.  Provide a name for the new Lakehouse. Then
     select **Create and Connect**.
 
-3.  ![](./media/image28.png)Configure and map your source data to your
-    destination; change the load settings to **Load to new table**, then
-    select **Next** to finish your destination configurations.
+![](./media/image28.png)
+
+3.  Configure and map your source data to your destination; change the
+    load settings to **Load to new table**, then select **Next** to
+    finish your destination configurations.
+
+![](./media/image29.png)
 
 ### **Task-4: Review and create your copy activity**
 
-1.  Check the checkbox of **Start data transfer immediately** so that it
+1.  Check the checkbox of Start data transfer immediately so that it
     will run directly once the copy activity is added to the data
-    pipeline canvas.
-
-> ![](./media/image29.png)Review your copy activity settings in the
-> previous steps and select **Save + run** to finish. Or you can go back
-> to the previous steps to edit your settings if needed in the tool.
-
-2.  Once finished, the copy activity is added to your data pipeline
-    canvas and runs directly if you leave the **Start data transfer
-    immediately** checkbox selected. It’ll take 2-3 mins to show the
-    status as succeeded.
+    pipeline canvas. Review your copy activity settings in the
+    previous steps and select Save + run to finish. Or you can go back to
+    the previous steps to edit your settings if needed in the tool.
 
 ![](./media/image30.png)
+
+2.  Once finished, the copy activity is added to
+    your data pipeline canvas and runs directly if you leave the Start
+    data transfer immediately checkbox selected. It’ll take 2-3 mins to
+    show the status as succeeded.
+
+![](./media/image31.png)
 
 ## Exercise 4 – Run and Schedule your data pipeline
 
@@ -236,25 +279,31 @@ configuring a schedule for automated, recurring runs. By the end of this
 task, users will understand how to operationalize their data workflows
 by setting up reliable and time-based execution of pipelines.
 
-1.  ![](./media/image31.png)If you didn't leave the **Start data
-    transfer immediately** checkbox on the Review + Create page, switch
-    to the **Home tab** and select **Run**. Then select **Save** **and**
-    **Run**.
-
-2.  On the **Output** tab, select the link with the name of your Copy
-    activity to monitor progress and check the results of the run.
+1.  If you didn't leave the Start data transfer
+    immediately checkbox on the **Review + Create** page, switch to
+    the **Home** tab and select **Run**. Then select **Save and Run**.
 
 ![](./media/image32.png)
 
-3.  ![](./media/image33.png)The **Copy data details** dialog displays
+2.  On the **Output** tab, select the link with
+    the name of your Copy activity to monitor progress and check the
+    results of the run.
+
+![](./media/image33.png)
+
+3.  The **Copy data** details dialog displays
     the results of the run including status, volume of data read and
     written, start and stop times, and duration.
 
-4.  ![](./media/image34.png)You can also schedule the pipeline to run
-    with a specific frequency as required. The following example shows
-    how to schedule the pipeline to run every 15 minutes.
+![](./media/image34.png)
+
+4.  You can also schedule the pipeline to run with a specific frequency as required.
+    The following example shows how to schedule the pipeline to run
+    every 15 minutes.
 
 ![](./media/image35.png)
+
+![](./media/image36.png)
 
 ## Summary
 
@@ -266,4 +315,4 @@ code. The new solution drastically reduced data ingestion time from
 hours to just minutes, allowing for faster data availability.
 Additionally, the pipeline's scalability enabled it to handle
 high-volume data files seamlessly, supporting the organization’s growing
-data needs
+data needs.
