@@ -131,8 +131,8 @@ To create a workspace:
 ### **Task-3: Create a Warehouse with sample data** 
 
 1.  In the **DataFactory_Fabric** Workspace
-    page, select **+New Item** and Look for the **Sample warehouse**
-    card under Store Data section**.**
+    page, select **+New Item** and Search for the **Sample warehouse**
+    card under Store Data section. **Please note that you need to go for the Sample Warehouse here.**
 
     ![](./media/image13.png)
 
@@ -169,7 +169,7 @@ In this exercise, you will learn how to:
 
 Complete the following steps to create a new Copy job:
 
-1.  Navigate to the existing workspace i.e., +++**DataFactory_Fabric**+++
+1.  Navigate to the existing workspace i.e., **DataFactory_Fabric**
     page.
 
     ![](./media/image17.png)
@@ -179,7 +179,7 @@ Complete the following steps to create a new Copy job:
 
     ![](./media/image18.png)
 
-3.  Assign a name to the new job, then select **Create**.
+3.  Assign a name to the new job i.e., +++Copyjob-DF+++, then select **Create**.
 
     ![A screenshot of a computer Description automatically
     generated](./media/image19.png)
@@ -207,7 +207,7 @@ Complete the following steps to create a new Copy job:
 
 7.  Select the **Workspace** name from the
     drop-down and provide a name to the **lakehouse** as
-    **Lakehouse_DF**.
+    +++**Lakehouse_DF**+++.
 
     ![](./media/image23.png)
 
@@ -255,16 +255,16 @@ Follow these steps to monitor a copy job in copy job panel.
 1.  Select **More** to see more details about the job, including the run
     ID, which is useful if you need to create a support ticket.
 
-    ![](./media/image28.png)
-    
     ![](./media/image29.png)
+    
+    ![](./media/image28.png)
 
 2.  You can also select **View run history** to see a list of prior
     runs.
 
-    ![](./media/image30.png)
-    
     ![](./media/image31.png)
+    
+    ![](./media/image30.png)
 
 ### **Task-2: Monitor in the Monitoring Hub**
 
