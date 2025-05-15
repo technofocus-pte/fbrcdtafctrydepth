@@ -39,7 +39,7 @@ To create a workspace:
     ![](./media/image1.png)
 
 2.  In the Create a **workspace tab**, enter the name of the workspace
-    as **DataFactory-Param** and click on the **Apply** button.
+    as +++**DataFactory-Param**+++ and click on the **Apply** button.
 
     ![A screenshot of a computer Description automatically
     generated](./media/image2.png)
@@ -58,7 +58,7 @@ To create a workspace:
     generated](./media/image4.png)
 
 5.  On the **New Lakehouse** dialog, provide a name for your lakehouse
-    as **MyLakehouse** and click on the **Create** button.
+    as +++**MyLakehouse**+++ and click on the **Create** button.
 
     ![A screenshot of a computer Description automatically
     generated](./media/image5.png)
@@ -79,7 +79,7 @@ To create a workspace:
 
     ![](./media/image8.png)
 
-8.  Name the new subfolder as **sample-src-data** and click on
+8.  Name the new subfolder as +++**sample-src-data**+++ and click on
     **Create** button.
 
     ![](./media/image9.png)
@@ -96,18 +96,18 @@ To create a workspace:
     destination lakehouse.
 
     To create a new txt file, open notepad and write a sample content in
-    it i.e**., Enhancing Data Pipeline with Parameters in Microsoft Fabric.**
+    it i.e., +++**Enhancing Data Pipeline with Parameters in Microsoft Fabric.**+++
 
     ![](./media/image11.png)
 
-11. Save the txt file as **f1_src.txt.**
+11. Save the txt file as +++**f1_src.txt.**+++
 
     ![](./media/image12.png)
 
     ![A screenshot of a computer Description automatically
     generated](./media/image13.png)
 
-12. Click on **Get data** button.
+12. Click on the folder name that you have created in the lakehouse and select **Get data** button.
 
     ![A screenshot of a computer Description automatically
     generated](./media/image14.png)
@@ -159,7 +159,7 @@ To create a workspace:
     generated](./media/image22.png)
 
 4.  Enter a name of the pipeline as
-    **DF-pipeline** and click on **Create** button.
+    +++**DF-pipeline**+++ and click on **Create** button.
 
     ![A screenshot of a computer Description automatically
     generated](./media/image23.png)
@@ -175,7 +175,7 @@ To create a workspace:
     ![A screenshot of a computer Description automatically
     generated](./media/image25.png)
 
-7.  Rename the copy data activity to **Copy data LH to LH.**
+7.  Rename the copy data activity to +++**Copy data LH to LH**+++
 
     ![A screenshot of a computer Description automatically
     generated](./media/image26.png)
@@ -199,7 +199,7 @@ To create a workspace:
 
 3.  Here, create two parameters for the
     pipeline that are both going to be of string type. Name the **first
-    parameter** which represents the source file as **src_filename**.
+    parameter** which represents the source file as +++**src_filename**+++
 
     ![A screenshot of a computer Description automatically
     generated](./media/image30.png)
@@ -216,7 +216,7 @@ To create a workspace:
     generated](./media/image32.png)
 
 6.  Second parameter represents the **destination file**. Provide a name
-    to this parameter as **dst_filename**.
+    to this parameter as +++**dst_filename**+++.
 
     **Note: Default values for these parameters will be added while
     running the pipeline later in the steps.**
@@ -247,10 +247,10 @@ To create a workspace:
     copy the raw files.
 
     ![A screenshot of a computer Description automatically
-    generated](./media/image37.png)
+    generated](./media/image38.png)
     
     ![A screenshot of a computer
-    Description automatically generated](./media/image38.png)
+    Description automatically generated](./media/image37.png)
 
 5.  To add a file path, select **Browse** option.
 
@@ -334,7 +334,7 @@ Now, you are done with the source configuration!
     generated](./media/image49.png)
 
 4.  Provide a name of the destination
-    folder as **sample-dst-data** in the directory field of the File path.
+    folder as +++**sample-dst-data**+++ in the directory field of the File path.
 
     ![A screenshot of a computer Description automatically
     generated](./media/image50.png)
@@ -406,13 +406,13 @@ Now, you are done with the source configuration!
 3.  Now, provide values for the parameters that you have defined for
     this pipeline. To the **first parameter as src_filename**, input the
     file name of the first file created in the Lakehouse as
-    **f1_src.txt.**
+    +++**f1_src.txt**+++
 
     ![A screenshot of a computer Description automatically
     generated](./media/image60.png)
 
 4.  To the **destination parameter as dst_filename**, input the file
-    name as **f1_dst.txt**. The file will be renamed after it has been
+    name as +++**f1_dst.txt**+++. The file will be renamed after it has been
     copied to the Lakehouse.
 
     ![A screenshot of a computer Description automatically
