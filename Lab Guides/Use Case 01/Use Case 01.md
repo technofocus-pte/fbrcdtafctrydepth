@@ -37,7 +37,66 @@ Specifically, you will:
 - **Provision a Data Warehouse** to serve as the source for your Copy
   Job.
 
-### **Task-1: Create a New Workspace**
+### **Task-1: Start a Fabric Capacity Trial**
+
+Follow these steps to start your Fabric capacity trial and become the
+Capacity administrator of that trial.
+
+1.  Open your browser and browse the **Microsoft Fabric Trial Page**
+    +++https://app.fabric.microsoft.com/+++
+
+2.  In the **Microsoft Fabric** window, enter your given credentials,
+    and click on the **Submit** button.
+     ![](./media/image1.png)
+
+4.  Then, In the **Microsoft** window enter the password and click on
+    the **Sign in** button 
+
+    ![](./media/image2.png)
+
+5.  In **Stay signed in?** window, click on the **Yes** button.
+
+    ![](./media/image3.png)
+
+6.  On **Fabric Home** page, click on the **Account manager** on the
+    right side.
+
+     ![](./media/image4.png)
+
+6.  In the Account manager, select **Free trial**. If you don't
+    see **Free trial** or **Start trial** or a **Trial status**, trials
+    might be disabled for your tenant.
+
+    > **Note:** If the Account manager already displays **Trial status**,
+    > you may already have a **Power BI trial** or a **Fabric (Free)
+    > trial** in progress. To test this out, attempt to use a Fabric
+    > feature. For more information, see [**Start using
+    > Fabric**](https://learn.microsoft.com/en-us/fabric/fundamentals/fabric-trial#other-ways-to-start-a-microsoft-fabric-trial).
+    
+     ![](./media/image5.png)
+
+7.  If prompted, agree to the terms and select the appropriate Trial
+    capacity region and then select **Activate**.
+
+    ![](./media/image6.png)
+
+8.  Once your trial capacity is ready, you receive a confirmation
+    message. Select **Fabric Home Page** to begin working in Fabric.
+    You're now the Capacity administrator for that trial capacity.
+
+     ![](./media/image7.png)
+
+9.  Open your Account manager again. Notice the heading for **Trial
+    status**. Your Account manager keeps track of the number of days
+    remaining in your trial.
+
+    ![](./media/image8.png)
+
+Congratulations. You now have a Fabric trial capacity that includes a
+Power BI individual trial (if you didn't already have a Power
+BI *paid* license) and a Fabric trial capacity.
+
+### **Task-2: Create a New Workspace**
 
 To create a workspace:
 
@@ -60,7 +119,7 @@ To create a workspace:
 
     ![](./media/image4.png)
 
-### **Task-2: Create a Warehouse with sample data** 
+### **Task-3: Create a Warehouse with sample data** 
 
 1.  In the **DataFactory_Fabric** Workspace page,
     select **+New Item** and Look for the **Sample warehouse** card
