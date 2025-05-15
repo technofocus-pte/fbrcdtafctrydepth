@@ -28,7 +28,7 @@ Storage source to a Lakehouse destination.
 Follow these steps in Azure portal to create a Blob storage account:
 
 1.  Log in to **Azure Portal** by clicking on this url -
-    +++**<https://portal.azure.com>+++** (Please make sure you have a
+    +++https://portal.azure.com+++ (Please make sure you have a
     subscription before doing all this. If you created a free account
     for the first time, you’ll already have a FREE TRIAL subscription
     for 1 month).
@@ -239,7 +239,7 @@ Follow these steps to monitor a copy job in the copy job panel.
 
     ![](./media/image27.png)
 
-2.  Provide a name for the new Lakehouse. Then
+2.  Provide a name for the new Lakehouse as +++Lakehouse1+++. Then
     select **Create and Connect**.
 
     ![](./media/image28.png)
