@@ -27,8 +27,7 @@ The lab is divided into three exercises:
 
 ## Task 1: Create a workspace
 
-Before working with data in Fabric, create a workspace with the Fabric
-trial enabled.
+Before working with data in Fabric, create a workspace:
 
 1.  Open your browser and browse to
     +++<https://app.fabric.microsoft.com/>+++
@@ -71,11 +70,11 @@ trial enabled.
     |Advanced	|Under License mode, select Trial|
     |Default storage format	|Small semantic model storage format|
 
-![A screenshot of a computer Description automatically
+    ![A screenshot of a computer Description automatically
 generated](./media/image6.png)
 
-![A screenshot of a computer Description
-automatically generated](./media/image7.png)
+    ![A screenshot of a computer Description
+    automatically generated](./media/image7.png)
 
 ![](./media/image8.png)
 
@@ -145,15 +144,15 @@ automatically generated](./media/image7.png)
     Select **Tables** for the **Root folder**, provide a table name
     +++**Bronze+++**, and select the **Next**.
 
-    ![](./media/image20.png)
+    ![A screenshot of a computer Description
+    automatically generated](./media/image21.png)
 
-6.  Finally, on the **Review + save** page of the copy data assistant, review the
+7.  Finally, on the **Review + save** page of the copy data assistant, review the
     configuration. For this lab, uncheck the **Start data transfer
     immediately** checkbox, since we run the activity manually in the
     next step. Then select **OK**.
 
-    ![A screenshot of a computer Description
-    automatically generated](./media/image21.png)
+   ![](./media/image20.png)
 
 ## Task 4: Run and view the results of your Copy activity.
 
@@ -307,22 +306,11 @@ prepare the data before combining it with the trips data.
 
     ![](./media/image42.png)
 
-2.  In the **Connect to data source** pane, under **Connection
-    settings**, select **Upload file (Preview)** radio button, then
-    click on **Browse** button and browse your VM **C:\LabFiles**, then
-    select the **NYC-Taxi-Green-Discounts** file and click on the
-    **Open** button.
+2. In the Connect to data source pane, under Connection settings, select **Link to file** radio button, then enter +++https://raw.githubusercontent.com/ekote/azure-architect/master/Generated-NYC-Taxi-Green-Discounts.csv+++, make sure **authentication kind** is set to **Anonymous**. click on the **Next** button.
 
-    ![](./media/image43.png)
+   ![](./media/image43.png)
 
-    ![](./media/image44.png)
-
-3.  In the **Connect to data source** pane,
-    click on the **Next** button.
-
-    ![](./media/image45.png)
-
-4.  On the **Preview file data** dialog, select **Create**.
+5.  On the **Preview file data** dialog, select **Create**.
 
     ![](./media/image46.png)
 
@@ -462,12 +450,14 @@ discount that should be applied to the trip, and the adjusted total.
     *+++if \[totalAmount\] \> 0 then \[totalAmount\] \* ( 1 -\[Discount\]
     ) else \[totalAmount\]+++*
 
-![](./media/image67.png) Then select **OK**.
+    Then select **OK**.
+
+    ![](./media/image67.png) 
 
     ![A screenshot of a computer Description automatically
     generated](./media/image68.png)
 
-11. Select the newly
+12. Select the newly
     create **TotalAfterDiscount** column and then select
     the **Transform** tab at the top of the editor window. On
     the **Number column** group, select the **Rounding** drop down and
@@ -475,12 +465,12 @@ discount that should be applied to the trip, and the adjusted total.
 
     ![](./media/image69.png)
 
-12. On the **Round** dialog, enter **2** for the
+13. On the **Round** dialog, enter **2** for the
     number of decimal places and then select **OK**.
 
     ![](./media/image70.png)
 
-13. Change the data type of the **IpepPickupDatetime** from **Date** to
+14. Change the data type of the **IpepPickupDatetime** from **Date** to
     **Date/Time**.
 
     ![](./media/image71.png)
@@ -488,7 +478,7 @@ discount that should be applied to the trip, and the adjusted total.
     ![A screenshot of a computer Description
     automatically generated](./media/image72.png)
 
-14. Finally, expand the **Query settings** pane
+15. Finally, expand the **Query settings** pane
     from the right side of the editor if it isn't already expanded, and
     rename the query from **Merge** to **Output**.
 
@@ -563,9 +553,9 @@ we can define the output destination for the query.
 10. In the **Data_FactoryXX** pane, select **DataFactoryLakehouse** to view the
     new table loaded there.
 
-    ![](./media/image85.png)
-    
     ![](./media/image86.png)
+    
+    ![](./media/image85.png)
 
 # Exercise 3: Automate and send notifications with Data Factory
 
