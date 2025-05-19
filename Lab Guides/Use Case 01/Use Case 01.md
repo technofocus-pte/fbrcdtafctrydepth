@@ -37,7 +37,7 @@ Specifically, you will:
 - **Provision a Data Warehouse** to serve as the source for your Copy
   Job.
 
-### **Task-1: Start a Fabric Capacity Trial**
+### **Task-1: Start a Fabric Free Trial**
 
 Follow these steps to start your Fabric capacity trial and become the
 Capacity administrator of that trial.
