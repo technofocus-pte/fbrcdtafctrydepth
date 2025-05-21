@@ -422,7 +422,7 @@ generated](./media/image6.png)
     6.  Advanced Settings – Enable **require incremental refresh query to
     fully fold.**
 
-Click on **OK** to save the settings.
+    Click on **OK** to save the settings.
 
     ![A screenshot of a computer Description automatically
     generated](./media/image58.png)
