@@ -295,7 +295,149 @@ generated](./media/image6.png)
 
     ![](./media/image41.png)
 
-## Task 3: Connect to a CSV file containing discount data
+## Task 3: Enable Fast Copy and Interpret Query Folding 
+
+1.  To enable the fast copy option, navigate to **Options** under the
+    **Home** tab.
+
+    ![A screenshot of a computer Description automatically
+    generated](./media/image42.png)
+
+2.  Select **Scale** option and make sure the checkbox to **allow use of
+    fast copy connectors** is checked. Click on **OK.**
+
+    ![A screenshot of a computer Description automatically
+    generated](./media/image43.png)
+
+3.  Before moving ahead with fast copy and avoid performance issues, you
+    need to check the **Applied Steps** under **Query Settings** and
+    examine the **query folding indicator** next to the steps to
+    determine how many steps can use fast copy for better performance.
+
+    ![A screenshot of a computer Description automatically
+    generated](./media/image44.png)
+
+4.  The last two steps shows a red icon, indicating that the **Filter
+    rows** step isn't supported by fast copy. However, all previous
+    steps showing the yellow icon can be potentially supported by fast
+    copy.
+
+    ![A screenshot of a computer Description automatically
+    generated](./media/image45.png)
+
+5.  At this point if you directly publish and run your Dataflow Gen2, it
+    might doesn't use the fast copy engine to load your data. To still
+    use the fast copy engine, you can **delete** these last two
+    transformations for **Filtered rows** showing red, indicating that
+    they aren't supported by fast copy but for this lab, we are not
+    preferring that.
+
+6.  Right-click on the query name to enable fast copy.
+
+    ![A screenshot of a computer Description automatically
+    generated](./media/image46.png)
+
+7.  Navigate to your workspace from the left pane.
+
+    ![A screenshot of a computer Description automatically
+    generated](./media/image47.png)
+
+8.  You’ll be redirected to the **workspace** page. Select **More**
+    options for the **Dataflow 1** by clicking on the three dots beside
+    dataflow name.
+
+    ![A screenshot of a computer Description automatically
+    generated](./media/image48.png)
+
+9.  Select **Refresh History** option from the more options menu.
+
+    ![A screenshot of a computer Description automatically
+    generated](./media/image49.png)
+
+10. Click on the **start time** to see the details.
+
+    ![](./media/image50.png)
+
+11. Now, select the **Bronze** table to see if this query used Fast Copy
+    or not.
+
+    ![A screenshot of a computer Description automatically
+    generated](./media/image51.png)
+
+12. You can see in the **Engine**- **CopyActivity** is used. This
+    represents that **Fast** **Copy** is used.
+
+    ![A screenshot of a computer Description automatically
+    generated](./media/image52.png)
+
+## Task 4: Incremental Refresh in Dataflow Gen 2
+
+1.  Navigate to your dataflow from the workspace page and click on the
+    **dataflow1**.
+
+    ![A screenshot of a computer Description automatically
+    generated](./media/image53.png)
+
+2.  To move ahead with **incremental refresh**, you must have a data
+    that contains a **DateTime**, **Date**, or **DateTimeZone** column
+    that you can use to filter the data. In the Bronze table, you
+    already have a column with Date data type named
+    **IpepPickupDatetime**.
+
+3.  Also, Ensure that the query fully folds, which means that the query
+    is fully pushed down to the source system. If the query doesn't
+    fully fold, you need to delete the query so that it fully folds. You
+    can ensure the query fully folds by deleting the steps with red
+    indicator in the query editor.
+
+    ![](./media/image54.png)
+
+    ![A screenshot of a computer Description automatically
+    generated](./media/image55.png)
+
+4.  You’ll see now that all the queries are now fully folded.
+
+    ![A screenshot of a computer Description automatically
+    generated](./media/image56.png)
+
+5.  Right-click the **Bronze** table name and select **Incremental
+    refresh** from the menu.
+
+    ![A screenshot of a computer Description automatically
+    generated](./media/image57.png)
+
+6.  Provide the required settings for incremental refresh.
+
+    1.  Enable Incremental refresh by clicking on the checkbox.
+
+    2.  Choose a **DateTime** column to filter by i.e.,
+        **IpepPickupDatetime.**
+    3.  Extract data from the past- **2 Weeks.**
+
+    4.  Bucket size - **Day**
+
+    5.  Only extract new data when the maximum value in this column changes-
+        **IpepPickupDatetime.**
+
+    6.  Advanced Settings – Enable **require incremental refresh query to
+    fully fold.**
+
+Click on **OK** to save the settings.
+
+    ![A screenshot of a computer Description automatically
+    generated](./media/image58.png)
+
+7.  **Publish** the Dataflow Gen2.
+
+    ![A screenshot of a computer Description automatically
+    generated](./media/image59.png)
+
+After you configure incremental refresh, the dataflow automatically
+refreshes the data incrementally based on the settings you provided. The
+dataflow only retrieves the data that changed since the last refresh.
+So, the dataflow runs faster and consumes less resources.
+
+## Task 5: Connect to a CSV file containing discount data
 
 Now, with the data from the trips in place, we want to load the data
 that contains the respective discounts for each day and VendorID, and
@@ -314,7 +456,7 @@ prepare the data before combining it with the trips data.
 
     ![](./media/image46.png)
 
-## Task 4: Transform the discount data
+## Task 6: Transform the discount data
 
 1.  Reviewing the data, we see the headers appear to be in the first
     row. Promote them to headers by selecting the table's context menu
@@ -363,7 +505,7 @@ prepare the data before combining it with the trips data.
 
     ![](./media/image55.png)
 
-**Task 5: Combine trips and discounts data**
+**Task 7: Combine trips and discounts data**
 
 The next step is to combine both tables into a single table that has the
 discount that should be applied to the trip, and the adjusted total.
@@ -486,7 +628,7 @@ discount that should be applied to the trip, and the adjusted total.
 
     ![](./media/image74.png)
 
-**Task 6: Load the output query to a table in the Lakehouse**
+**Task 8: Load the output query to a table in the Lakehouse**
 
 With the output query now fully prepared and with data ready to output,
 we can define the output destination for the query.
