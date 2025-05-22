@@ -259,29 +259,44 @@ trial enabled.
 
 # **Exercise 3: Create tables in a Data Warehouse**
 
-## Task 1: Create table in a Data Warehouse
+## Task 1: Create a table in a Warehouse using Script Activity in Data Pipeline
 
-1.  On **Load Customer Data** page, click on **Warehouse_Fabric28**
-    workspace in the left-sided navigation bar.
+1.  Search for **Script** Activity in the pipeline Activities ribbon at
+    the top and select it to add it to the pipeline canvas.
 
     ![A screenshot of a computer Description automatically
     generated](./media/image28.png)
 
-2.  On the **Workspace** page, carefully navigate and click on
-    **WideWorldImporters** having **Warehouse** type as shown in the
-    below image.
+2.  You’ll see there are two tabs – **General** and **Settings** tab.
+    Keep the **General** settings as it is and select **Settings** tab
+    to start configuring it.
 
     ![A screenshot of a computer Description automatically
     generated](./media/image29.png)
 
-3.  On the **WideWorldImporters** page, go to the **Home **tab, select **SQL** from the drop
-    down, and click on **New SQL query**.
+3.  Choose your connection and select the warehouse that you have
+    created **WorldWideImporters** from the dropdown.
 
     ![A screenshot of a computer Description automatically
     generated](./media/image30.png)
 
-4.  In the query editor, paste the following code and select **Run** to
-    execute the query
+4.  You can choose either **Query** to get a data result
+    or **NonQuery** for any catalog operations. Here, as you’re going to
+    insert a table, that will go in **NonQuery** Script.
+
+    **Note: Database statements that perform catalog operations (for
+    example, querying the structure of a database or creating database
+    objects such as tables), or change the data in a database by executing
+    UPDATE, INSERT, or DELETE statements.**
+
+    ![A screenshot of a computer Description automatically
+    generated](./media/image31.png)
+
+5.  Click on the **pencil** icon to edit/add the script in code editor.
+
+    ![](./media/image32.png)
+
+6.  Paste the following code in the code editor and select **OK**.
 
     ```
     /*
@@ -343,34 +358,48 @@ trial enabled.
     ```
 
     ![A screenshot of a computer Description automatically
-    generated](./media/image31.png)
-
-    ![A screenshot of a computer Description automatically
-    generated](./media/image32.png)
-
-5.  To save this query, right-click on the **SQL query 1** tab just
-    above the editor and select **Rename**.
-
-    ![A screenshot of a computer Description automatically
     generated](./media/image33.png)
 
-6.  In the **Rename** dialog box, under **Name**
-    field, enter +++**Create Tables+++** to change the name of **SQL
-    query 1**. Then, click on the **Rename** button.
+7.  Query is now added in the script textbox.
 
-    ![](./media/image34.png)
+    ![A screenshot of a computer Description automatically
+    generated](./media/image34.png)
 
-7.  Validate the table was created successfully by selecting the
-    **refresh icon** button on the ribbon.
+8.  Click on **Run** button from the Home tab to the run the pipeline.
 
     ![A screenshot of a computer Description automatically
     generated](./media/image35.png)
 
-8.  In the **Explorer** pane, you’ll see the **fact_sale** table
-    and **dimension_city** table under the **dbo** schema.
+9.  Select **Save and run** button.
 
     ![A screenshot of a computer Description automatically
     generated](./media/image36.png)
+
+10. Script1 Activity status is showing **succeeded**.
+
+    ![A screenshot of a computer Description automatically
+    generated](./media/image37.png)
+
+11. To check if this script activity worked fine and if it created
+    tables as per the query, navigate to **warehouse
+    (WorldWideImporters)** through left pane.
+
+    ![A screenshot of a computer Description automatically
+    generated](./media/image38.png)
+
+12. **Validate** the table was created successfully by selecting the
+    **refresh** icon button on the ribbon.
+
+    ![A screenshot of a computer Description automatically
+    generated](./media/image39.png)
+
+13. In the **Explorer** pane, expand **Schemas**, then **dbo**, then
+    **Tables**, the **fact_sale** table and **dimension_city** table
+    under the **dbo** schema is successfully created using the script
+    activity in pipeline.
+
+    ![A screenshot of a computer Description automatically
+    generated](./media/image40.png)
 
 ## Task 2: Load data using T-SQL
 
