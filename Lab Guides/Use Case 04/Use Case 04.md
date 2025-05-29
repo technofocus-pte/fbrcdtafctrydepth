@@ -383,21 +383,12 @@ generated](./media/image6.png)
 2.  To move ahead with **incremental refresh**, you must have a data
     that contains a **DateTime**, **Date**, or **DateTimeZone** column
     that you can use to filter the data. In the Bronze table, you
-    already have a column with Date data type named
+    Already have a column with Date data type named
     **IpepPickupDatetime**.
 
-3.  Also, Ensure that the query fully folds, which means that the query
+3.  Also, ensure that the query fully folds, which means that the query
     is fully pushed down to the source system. If the query doesn't
-    fully fold, you need to delete the query so that it fully folds. You
-    can ensure the query fully folds by deleting the steps with red
-    indicator in the query editor.
-
-    ![](./media/image54.png)
-
-    ![A screenshot of a computer Description automatically
-    generated](./media/image55.png)
-
-4.  You’ll see now that all the queries are now fully folded.
+    fully fold, you need to delete the query so that it fully folds, which you already did in earlier steps of fast copy. As the query      now has green indicators representing its fully folded state. 
 
     ![A screenshot of a computer Description automatically
     generated](./media/image56.png)
