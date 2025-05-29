@@ -325,46 +325,48 @@ generated](./media/image6.png)
     ![A screenshot of a computer Description automatically
     generated](./media/image45.png)
 
-5.  At this point if you directly publish and run your Dataflow Gen2, it
-    might doesn't use the fast copy engine to load your data. To still
-    use the fast copy engine, you can **delete** these last two
-    transformations for **Filtered rows** showing red, indicating that
-    they aren't supported by fast copy but for this lab, we are not
-    preferring that.
+5.  At this point, if you directly publish and run your Dataflow Gen2, it
+    might not use the fast copy engine to load your data. To still use the fast copy engine,
+    You can delete these last two transformations for Filtered rows showing red by clicking on the
+    (X) cross symbol beside the step name, indicating that they 
+    aren't supported by fast copy, but for this lab, we are not preferring that.
 
-6.  Right-click on the query name to enable fast copy.
+   ![A screenshot of a computer Description automatically
+    generated](./media/image129.png)
+
+7.  Right-click on the query name to enable fast copy.
 
     ![A screenshot of a computer Description automatically
     generated](./media/image46.png)
 
-7.  Navigate to your workspace from the left pane.
+8.  Now, publish the dataflow.
 
     ![A screenshot of a computer Description automatically
-    generated](./media/image47.png)
+    generated](./media/image130.png)
 
-8.  You’ll be redirected to the **workspace** page. Select **More**
+9.  You’ll be redirected to the **workspace** page. Select **More**
     options for the **Dataflow 1** by clicking on the three dots beside
     dataflow name.
 
     ![A screenshot of a computer Description automatically
     generated](./media/image48.png)
 
-9.  Select **Refresh History** option from the more options menu.
+10.  Select **Refresh History** option from the more options menu.
 
     ![A screenshot of a computer Description automatically
     generated](./media/image49.png)
 
-10. Click on the **start time** to see the details.
+11. Click on the **start time** to see the details.
 
     ![](./media/image50.png)
 
-11. Now, select the **Bronze** table to see if this query used Fast Copy
+12. Now, select the **Bronze** table to see if this query used Fast Copy
     or not.
 
     ![A screenshot of a computer Description automatically
     generated](./media/image51.png)
 
-12. You can see in the **Engine**- **CopyActivity** is used. This
+13. You can see in the **Engine**- **CopyActivity** is used. This
     represents that **Fast** **Copy** is used.
 
     ![A screenshot of a computer Description automatically
