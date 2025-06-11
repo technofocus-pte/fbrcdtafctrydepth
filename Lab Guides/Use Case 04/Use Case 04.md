@@ -1,6 +1,6 @@
 # Use Case 4: Data Factory solution for moving and transforming data with dataflows and data pipelines
 
-**Overview**
+**Introduction**
 
 This lab helps you accelerate the evaluation process for Data Factory in
 Microsoft Fabric by providing a step-by-step guidance for a full data
@@ -8,7 +8,7 @@ integration scenario within one hour. By the end of this tutorial, you
 understand the value and key capabilities of Data Factory and know how
 to complete a common end-to-end data integration scenario.
 
-**Objectives**
+**Objective**
 
 The lab is divided into three exercises:
 
@@ -27,117 +27,90 @@ The lab is divided into three exercises:
 
 ## Task 1: Create a workspace
 
-Before working with data in Fabric, create a workspace:
+Before working with data in Fabric, create a workspace with the Fabric
+trial enabled.
 
-1.  Open your browser and browse to
-    +++<https://app.fabric.microsoft.com/>+++
+1.  On the Microsoft **Fabric Home Page**, select **New workspace**
+    option.
 
-2.  In the **Microsoft Fabric** window, enter your credentials, and
-    click on the **Submit** button.
+    ![A screenshot of a computer Description automatically generated](./media/image1.png)
 
-    ![A screenshot of a login screen Description automatically
-    generated](./media/image1.png)
-
-3.  Then, in the **Microsoft** window, enter the password and click on
-    the **Sign in** button**.**
-
-    ![](./media/image2.png)
-
-4.  In the **Microsoft Fabric** home page, select the **Power BI**
-    template.
-
-    ![](./media/image3.png)
-
-5.  In the **Power BI Home** page
-    left-sided navigation bar, select **Workspaces** (the icon looks
-    similar to 🗇).
-
-    ![A screenshot of a computer Description automatically
-    generated](./media/image4.png)
-
-6.  In the Workspaces pane,
-    select **+** **New workspace**.
-
-    ![A screenshot of a computer Description automatically
-    generated](./media/image5.png)
-
-7.  In the **Create a workspace** tab, enter the following details and
+2.  In the **Create a workspace** tab, enter the following details and
     click on the **Apply** button.
 
     |   |    |
     |-----|-----|
-    |Workspace Name|	Enter a unique name. for example – Data-Factory67|
+    |Workspace Name|	Enter a unique name as +++Data-Factory67+++|
     |Advanced	|Under License mode, select Trial|
     |Default storage format	|Small semantic model storage format|
 
-    ![A screenshot of a computer Description automatically
-generated](./media/image6.png)
+    ![A screenshot of a computer Description automatically generated](./media/image2.png)
 
-    ![A screenshot of a computer Description
-    automatically generated](./media/image7.png)
+    ![A screenshot of a computer Description automatically generated](./media/image3.png)
 
-![](./media/image8.png)
+    ![](./media/image4.png)
 
-8.  Wait for the deployment to complete. It’ll take approximately 2-3
+3.  Wait for the deployment to complete. It’ll take approximately 2-3
     minutes.
 
-9.  In the **Data-FactoryXX** workspace page,
+4.  In the **Data-FactoryXX** workspace page,
     navigate and click on **+New** button, then select **Lakehouse.**
 
-    ![](./media/image9.png)
+    ![](./media/image5.png) 
 
-10. In the **New lakehouse** dialog box, enter
-    +++**DataFactoryLakehouse+++** in the **Name** field, click on the
+5.  In the **New lakehouse** dialog box, enter
+    +++**DataFactoryLakehouse**+++ in the **Name** field, click on the
     **Create** button and open the new lakehouse.
+
+    ![](./media/image6.png)
+
+    ![A screenshot of a computer Description automatically
+    generated](./media/image7.png)
+
+6.  Now, click on **Data-FactoryXX** on the left-sided navigation pane.
+
+    ![](./media/image8.png)
+
+## Task 2: Create a data pipeline
+
+1.  Select the **+ New item** option on the workspace page.
+
+    ![A screenshot of a computer Description automatically
+    generated](./media/image9.png)
+
+2.  Select **Data Pipeline** from the new item
+    flyout menu.
 
     ![](./media/image10.png)
 
-    ![A screenshot of a computer Description automatically
-    generated](./media/image11.png)
+3.  Provide a Pipeline Name as +++**First_Pipeline1**+++ and then select
+    **Create**.
 
-11. Now, click on **Data-FactoryXX** on the left-sided navigation pane.
-
-    ![](./media/image12.png)
-    
-### **Task-2: Create a Data Pipeline** 
-
-1.  Select the default Power BI icon at the
-    bottom left of the screen, and select **Fabric**.
-
-    ![](./media/image13.png)
-
-2.  Select a workspace from the **Workspaces**
-    tab, then select **+New item** and choose **Data Pipeline**.
-
-    ![](./media/image14.png)
-
-3.  Provide a Pipeline Name and then select **Create**.
-
-    ![](./media/image15.png)
+    ![](./media/image11.png)
 
 ## Task 3: Use a Copy activity in the pipeline to load sample data to a data Lakehouse
 
 1.  In the **First_Pipeline1** home page, Select **Copy data assistant**
      to open the copy assistant tool.
 
-    ![](./media/image16.png)
+    ![](./media/image12.png)
 
 2.  The **Copy data** dialog is displayed with
     the first step, **Choose data source**, highlighted. Select
      **Sample data** section, and select the **NYC Taxi-Green** data
     source type. Then select **Next**.
 
-    ![](./media/image17.png)
+    ![](./media/image13.png)
 
 3.  In the **Connect to data source**, click on **Next** button.
 
-    ![](./media/image18.png)
+    ![](./media/image14.png)
 
-4.  Select OneLake data hub and
-    select **Existing Lakehouse** on the data destination configuration
-    page that appears.
+4.  Select **OneLake data hub** and select **Existing Lakehouse** on the
+    data destination configuration page that appears.
 
-    ![](./media/image19.png)
+    ![A screenshot of a computer Description automatically
+    generated](./media/image15.png)
 
 5.  Now configure the details of your Lakehouse destination on
     the **Select and map to folder path or table.** page.
@@ -145,48 +118,47 @@ generated](./media/image6.png)
     +++**Bronze+++**, and select the **Next**.
 
     ![A screenshot of a computer Description
-    automatically generated](./media/image21.png)
+    automatically generated](./media/image17.png)
 
-7.  Finally, on the **Review + save** page of the copy data assistant, review the
+6.  Finally, on the **Review + save** page of the copy data assistant, review the
     configuration. For this lab, uncheck the **Start data transfer
     immediately** checkbox, since we run the activity manually in the
     next step. Then select **OK**.
 
-   ![](./media/image20.png)
+    ![](./media/image16.png)
 
 ## Task 4: Run and view the results of your Copy activity.
 
 1.  On the **Home** tab of the pipeline editor window, then select
-    the **Run** button.
+    the **Run** button to manually trigger the run of the pipeline.
 
     ![A screenshot of a computer Description automatically
-    generated](./media/image22.png)
+    generated](./media/image18.png)
 
 2.  In the **Save and run?** dialog box, click
     on **Save and run** button to execute these activities. This
-    activity will take around 11-12 min
+    activity will take around 12-13 min.
 
-    ![](./media/image23.png)
+    ![](./media/image19.png)
 
     ![A screenshot of a computer Description automatically
-    generated](./media/image24.png)
+    generated](./media/image20.png)
 
 3.  You can monitor the run and check the results on the **Output** tab
     below the pipeline canvas. Select the **activity name** to view the
     run details.
 
-    ![](./media/image25.png)
+    ![](./media/image21.png)
 
-4.  The run details show 76,513,115 rows read
-    and written.
+4.  The run details show 76,513,115 rows read and written.
 
-    ![](./media/image26.png)
-    
+    ![](./media/image22.png)
+
 5.  Expand the **Duration breakdown** section to
     see the duration of each stage of the Copy activity. After reviewing
-    the copy details, select **Close**.
+    the copy details, select Close.
 
-    ![](./media/image27.png)
+    ![](./media/image23.png)
 
 **Exercise 2: Transform data with a dataflow in Data Factory**
 
@@ -194,51 +166,45 @@ generated](./media/image6.png)
 
 1.  On the **First_Pipeline1** page, from the sidebar select **Create.**
 
-    ![](./media/image28.png)
+    ![](./media/image24.png)
 
-2.  On the **Data Factory Data-FactoryXX** home page, to create a new
-    dataflow gen2 click on **Dataflow Gen2** under the **Data
-    Factory.** 
+2.  On the **new item** page, to create a new dataflow gen2, click
+    on **Dataflow Gen2** under the **Data Factory.** 
 
-    ![](./media/image29.png)
+    ![](./media/image25.png)
 
-3.  From the new dataflow menu, under the
-    **Power Query** pane click on **Get data drop down**, then select
-    **More...**.
+3.  From the new dataflow menu, under the **Power Query** pane click on
+    **Get data drop down**, then select **More...**.
 
-    ![](./media/image30.png)
+    ![A screenshot of a computer Description automatically
+    generated](./media/image26.png)
 
-4.  In the **Choose data source** tab, search
-    box search type +++**Lakehouse+++** and then click on the
-    **Lakehouse** connector.
+4.  In the **Choose data source** tab, search box search type
+    +++**Lakehouse+++** and then click on the **Lakehouse** connector.
 
-    ![](./media/image31.png)
+    ![A screenshot of a computer Description automatically
+    generated](./media/image27.png)
 
 5.  The **Connect to data source** dialog appears, and a new connection
     is automatically created for you based on the currently signed in
     user. Select **Next**.
 
     ![A screenshot of a computer Description automatically
-    generated](./media/image32.png)
+    generated](./media/image28.png)
 
-6.  The **Choose data** dialog is displayed. Use
-    the navigation pane to find the Lakehouse you created for the
-    destination in the prior module, and select
-    the **DataFactoryLakehouse** data table then click on **Create**
-    button.
+6.  The **Choose data** dialog is displayed. Use the navigation pane to
+    find the **workspace- Data-FactoryXX** and expand it. Then, expand
+    **Lakehouse** - **DataFactoryLakehouse**  you created for the
+    destination in the prior module, and select the **Bronze** table
+    from the list then click on **Create** button.
 
-    ![](./media/image33.png)
+    ![A screenshot of a computer Description automatically
+    generated](./media/image29.png)
 
-7.  Once your canvas is populated with the data, you can set **column
-    profile** information, as this is useful for data profiling. You can
-    apply the right transformation and target the right data values
-    based on it.
+7.  You’ll see the canvas is now populated with the data.
 
-    To do this, select **Options** from the ribbon
-    pane, then select the first three options under **Column profile**, and
-    then select **OK**.
-
-    ![](./media/image34.png)
+    ![A screenshot of a computer Description automatically
+    generated](./media/image30.png)
 
 ## Task 2: Transform the data imported from the Lakehouse
 
@@ -248,12 +214,12 @@ generated](./media/image6.png)
     convert the column from the **Date/Time** to **Date** type.
 
     ![A screenshot of a computer Description automatically
-    generated](./media/image35.png)
+    generated](./media/image31.png)
 
 2.  On the **Home** tab of the ribbon, select
     the **Choose columns** option from the **Manage columns** group.
 
-    ![](./media/image36.png)
+    ![](./media/image32.png)
 
 3.  On the **Choose columns** dialog, **deselect** some columns listed
     here, then select **OK**.
@@ -270,30 +236,29 @@ generated](./media/image6.png)
 
     - rateCodeID
 
-    ![](./media/image37.png)
+    ![](./media/image33.png)
 
-4.  Select the **storeAndFwdFlag** column's
-    filter and sort dropdown menu. (If you see a warning **List may be
-    incomplete**, select **Load more** to see all the data.)
+4.  Select the **storeAndFwdFlag** column's filter and sort dropdown
+    menu. (If you see a warning **List may be incomplete**,
+    select **Load more** to see all the data.)
 
-    ![](./media/image38.png)
+    ![](./media/image34.png)
 
 5.  Select '**Y'** to show only rows where a discount was applied, and
     then select **OK**.
 
-    ![](./media/image39.png)
+    ![](./media/image35.png)
 
-6.  Select the **Ipep_Pickup_Datetime** column
-    sort and filter dropdown menu, then select **Date filters**, and
-    choose the **Between...** filter provided for Date and Date/Time
-    types.
+6.  Select the **Ipep_Pickup_Datetime** column sort and filter dropdown
+    menu, then select **Date filters**, and choose
+    the **Between...** filter provided for Date and Date/Time types.
 
-    ![](./media/image40.png)
+    ![](./media/image36.png)
 
 7.  In the **Filter rows** dialog, select dates between **January 1,
-    2015**, and **January 31, 2015**, then select **OK**.
+    2019**, and **January 31, 2019**, then select **OK**.
 
-    ![](./media/image41.png)
+    ![](./media/image37.png)
 
 ## Task 3: Enable Fast Copy and Interpret Query Folding 
 
@@ -301,13 +266,13 @@ generated](./media/image6.png)
     **Home** tab.
 
     ![A screenshot of a computer Description automatically
-    generated](./media/image42.png)
+    generated](./media/image38.png)
 
 2.  Select **Scale** option and make sure the checkbox to **allow use of
     fast copy connectors** is checked. Click on **OK.**
 
     ![A screenshot of a computer Description automatically
-    generated](./media/image43.png)
+    generated](./media/image39.png)
 
 3.  Before moving ahead with fast copy and avoid performance issues, you
     need to check the **Applied Steps** under **Query Settings** and
@@ -315,7 +280,7 @@ generated](./media/image6.png)
     determine how many steps can use fast copy for better performance.
 
     ![A screenshot of a computer Description automatically
-    generated](./media/image44.png)
+    generated](./media/image40.png)
 
 4.  The last two steps shows a red icon, indicating that the **Filter
     rows** step isn't supported by fast copy. However, all previous
@@ -323,54 +288,56 @@ generated](./media/image6.png)
     copy.
 
     ![A screenshot of a computer Description automatically
-    generated](./media/image45.png)
+    generated](./media/image41.png)
 
-5.  At this point, if you directly publish and run your Dataflow Gen2, it
-    might not use the fast copy engine to load your data. To still use the fast copy engine,
-    You can delete these last two transformations for Filtered rows showing red by clicking on the
-    (X) cross symbol beside the step name, indicating that they 
-    aren't supported by fast copy, but for this lab, we are not preferring that.
-
-   ![A screenshot of a computer Description automatically
-    generated](./media/image129.png)
-
-7.  Right-click on the query name to enable fast copy.
+5.  At this point if you directly publish and run your Dataflow Gen2, it
+    might doesn't use the fast copy engine to load your data. To still
+    use the fast copy engine, you can **delete** these last two
+    transformations for **Filtered rows** showing red by clicking on the
+    **(X)** **cross** **symbol** beside the step name, indicating that
+    they aren't supported by fast copy but for this lab, we are not
+    preferring that.
 
     ![A screenshot of a computer Description automatically
-    generated](./media/image46.png)
+    generated](./media/image42.png)
 
-8.  Now, publish the dataflow.
+6.  Right-click on the query name to enable fast copy.
 
     ![A screenshot of a computer Description automatically
-    generated](./media/image130.png)
+    generated](./media/image43.png)
 
-9.  You’ll be redirected to the **workspace** page. Select **More**
+7.  Now, **publish** the dataflow.
+
+    ![A screenshot of a computer Description automatically
+    generated](./media/image44.png)
+
+8.  You’ll be redirected to the **workspace** page. Select **More**
     options for the **Dataflow 1** by clicking on the three dots beside
     dataflow name.
 
     ![A screenshot of a computer Description automatically
-    generated](./media/image48.png)
+    generated](./media/image45.png)
 
-10.  Select **Refresh History** option from the more options menu.
+9.  Select **Refresh History** option from the more options menu.
 
     ![A screenshot of a computer Description automatically
-    generated](./media/image49.png)
+    generated](./media/image46.png)
 
-11. Click on the **start time** to see the details.
+10. Click on the **start time** to see the details.
 
-    ![](./media/image50.png)
+    ![](./media/image47.png)
 
-12. Now, select the **Bronze** table to see if this query used Fast Copy
+11. Now, select the **Bronze** table to see if this query used Fast Copy
     or not.
 
     ![A screenshot of a computer Description automatically
-    generated](./media/image51.png)
+    generated](./media/image48.png)
 
-13. You can see in the **Engine**- **CopyActivity** is used. This
+12. You can see in the **Engine**- **CopyActivity** is used. This
     represents that **Fast** **Copy** is used.
 
     ![A screenshot of a computer Description automatically
-    generated](./media/image52.png)
+    generated](./media/image49.png)
 
 ## Task 4: Incremental Refresh in Dataflow Gen 2
 
@@ -378,57 +345,60 @@ generated](./media/image6.png)
     **dataflow1**.
 
     ![A screenshot of a computer Description automatically
-    generated](./media/image53.png)
+    generated](./media/image50.png)
 
 2.  To move ahead with **incremental refresh**, you must have a data
     that contains a **DateTime**, **Date**, or **DateTimeZone** column
     that you can use to filter the data. In the Bronze table, you
-    Already have a column with Date data type named
+    already have a column with Date data type named
     **IpepPickupDatetime**.
 
-3.  Also, ensure that the query fully folds, which means that the query
+3.  Also, Ensure that the query fully folds, which means that the query
     is fully pushed down to the source system. If the query doesn't
-    fully fold, you need to delete the query so that it fully folds, which you already did in earlier steps of fast copy. As the query      now has green indicators representing its fully folded state. 
+    fully fold, you need to delete the query so that it fully folds. You
+    can ensure the query fully folds by deleting the steps with red
+    indicator in the query editor.
 
     ![A screenshot of a computer Description automatically
-    generated](./media/image56.png)
+    generated](./media/image51.png)
 
-5.  Right-click the **Bronze** table name and select **Incremental
+4.  Right-click the **Bronze** table name and select **Incremental
     refresh** from the menu.
 
     ![A screenshot of a computer Description automatically
-    generated](./media/image57.png)
+    generated](./media/image52.png)
 
-6.  Provide the required settings for incremental refresh.
+5.  Provide the required settings for incremental refresh.
 
-    1.  Enable Incremental refresh by clicking on the checkbox.
+    a.  Enable Incremental refresh by clicking on the checkbox.
 
-    2.  Choose a **DateTime** column to filter by i.e.,
-        **IpepPickupDatetime.**
-    3.  Extract data from the past- **2 Weeks.**
-
-    4.  Bucket size - **Day**
-
-    5.  Only extract new data when the maximum value in this column changes-
+    b.  Choose a **DateTime** column to filter by i.e.,
         **IpepPickupDatetime.**
 
-    6.  Advanced Settings – Enable **require incremental refresh query to
-    fully fold.**
+    c.  Extract data from the past- **2 Weeks.**
+
+    d.  Bucket size - **Day**
+
+    e.  Only extract new data when the maximum value in this column changes-
+        **.**
+
+    f.  Advanced Settings – Enable **require incremental refresh query to
+        fully fold.**
 
     Click on **OK** to save the settings.
 
     ![A screenshot of a computer Description automatically
-    generated](./media/image58.png)
+    generated](./media/image53.png)
 
-7.  **Publish** the Dataflow Gen2.
+6.  **Publish** the Dataflow Gen2.
 
     ![A screenshot of a computer Description automatically
-    generated](./media/image59.png)
+    generated](./media/image54.png)
 
-After you configure incremental refresh, the dataflow automatically
-refreshes the data incrementally based on the settings you provided. The
-dataflow only retrieves the data that changed since the last refresh.
-So, the dataflow runs faster and consumes less resources.
+    After you configure incremental refresh, the dataflow automatically
+    refreshes the data incrementally based on the settings you provided. The
+    dataflow only retrieves the data that changed since the last refresh.
+    So, the dataflow runs faster and consumes less resources.
 
 ## Task 5: Connect to a CSV file containing discount data
 
@@ -436,10 +406,11 @@ Now, with the data from the trips in place, we want to load the data
 that contains the respective discounts for each day and VendorID, and
 prepare the data before combining it with the trips data.
 
-1.  From the **Home** tab in the dataflow editor
-    menu, select the **Get data** option, and then choose **Text/CSV**.
+1.  From the **Home** tab in the dataflow editor menu, select the **Get
+    data** option, and then choose **Text/CSV**.
 
-    ![](./media/image60.png)
+    ![A screenshot of a computer Description automatically
+    generated](./media/image55.png)
 
 2.  In the **Connect to data source** pane, under **Connection
     settings**, select **Link to file** radio button, then enter
@@ -448,17 +419,17 @@ prepare the data before combining it with the trips data.
     on the **Next** button.
 
     ![A screenshot of a computer Description automatically
-    generated](./media/image61.jpeg)
+    generated](./media/image56.jpeg)
 
 3.  In the **Connect to data source** pane,
     click on the **Next** button.
 
-    ![](./media/image62.png)
+    ![](./media/image57.png)
 
 4.  On the **Preview file data** dialog,
     select **Create**.
 
-    ![](./media/image63.png)
+    ![](./media/image58.png)
 
 ## Task 6: Transform the discount data
 
@@ -467,43 +438,50 @@ prepare the data before combining it with the trips data.
     at the top left of the preview grid area to select **Use first row
     as headers**.
 
+    ![A screenshot of a computer Description automatically
+    generated](./media/image59.png)
+
     ***Note:** After promoting the headers, you can see a new step added
     to the **Applied steps** pane at the top of the dataflow editor to the
     data types of your columns.*
 
-    ![](./media/image64.png)
+    ![](./media/image60.png)
 
-3.  Right-click the **VendorID** column, and
-    from the context menu displayed, select the option **Unpivot other
-    columns**. This allows you to transform columns into attribute-value
-    pairs, where columns become rows.
+2.  Right-click the **VendorID** column, and from the context menu
+    displayed, select the option **Unpivot other columns**. This allows
+    you to transform columns into attribute-value pairs, where columns
+    become rows.
 
-    ![](./media/image65.png)
+    ![A screenshot of a computer Description automatically
+    generated](./media/image61.png)
 
-4.  With the table unpivoted, rename
+3.  With the table unpivoted, rename
     the **Attribute** and **Value** columns by double-clicking them and
     changing **Attribute** to **Date** and **Value** to **Discount**.
 
-    ![](./media/image66.png)
+    ![A screenshot of a computer Description automatically
+    generated](./media/image62.png)
 
-    ![](./media/image67.png)
+    ![A screenshot of a computer Description automatically
+    generated](./media/image63.png)
 
-5.  Change the data type of the Date column by selecting the data type
-    menu to the left of the column name and choosing **Date**.
+4.  Change the data type of the **Date** column by selecting the data
+    type menu to the left of the column name and choosing **Date**.
 
-    ![](./media/image68.png)
+    ![A screenshot of a computer Description automatically
+    generated](./media/image64.png)
 
-6.  Select the **Discount** column and then
-    select the **Transform** tab on the menu. Select **Number column**,
-    and then select **Standard** numeric transformations from the
-    submenu, and choose **Divide**.
+5.  Select the **Discount** column and then select the **Transform** tab
+    on the menu. Select **Number column**, and then
+    select **Standard** numeric transformations from the submenu, and
+    choose **Divide**.
 
-    ![](./media/image69.png)
+    ![](./media/image65.png)
 
-7.  On the **Divide** dialog, enter the value +++100+++, then click on
+6.  On the **Divide** dialog, enter the value +++100+++, then click on
     **OK** button.
 
-    ![](./media/image70.png)
+    ![](./media/image66.png)
 
 **Task 7: Combine trips and discounts data**
 
@@ -513,13 +491,14 @@ discount that should be applied to the trip, and the adjusted total.
 1.  First, toggle the **Diagram view** button so you can see both of
     your queries.
 
-    ![](./media/image71.png)
+    ![](./media/image67.png)
 
 2.  Select the **Bronze** query, and on the **Home** tab, Select
     the **Combine** menu and choose **Merge queries**, then **Merge
     queries as new**.
 
-    ![](./media/image72.png)
+    ![A screenshot of a computer Description automatically
+    generated](./media/image68.png)
 
 3.  On the **Merge** dialog,
     select **Generated-NYC-Taxi-Green-Discounts** from the **Right table
@@ -527,162 +506,177 @@ discount that should be applied to the trip, and the adjusted total.
     the top right of the dialog to see the suggested mapping of columns
     between the three tables.
 
-    ![](./media/image73.png)
+    ![A screenshot of a computer Description automatically
+    generated](./media/image69.png)
 
-4.  Choose each of the two suggested column
-    mappings, one at a time, mapping the VendorID and date columns from
-    both tables. When both mappings are added, the matched column
-    headers are highlighted in each table.
+4.  Choose each of the two suggested column mappings, one at a time,
+    mapping the VendorID and date columns from both tables. When both
+    mappings are added, the matched column headers are highlighted in
+    each table.
 
-    ![](./media/image74.png)
+    ![A screenshot of a computer Description automatically
+    generated](./media/image70.png)
 
 5.  A message is shown asking you to allow combining data from multiple
     data sources to view the results. Select **OK** 
 
-    ![](./media/image75.png)
+    ![A screenshot of a computer Description automatically
+    generated](./media/image71.png)
 
-6.  In the table area, you'll initially see a
-    warning that "The evaluation was canceled because combining data
-    from multiple sources may reveal data from one source to another.
-    Select continue if the possibility of revealing data is okay."
-    Select **Continue** to display the combined data.
-
-    ![](./media/image76.png)
-
-7.  In Privacy Levels dialog box, select the
-    **check box :Ignore Privacy Lavels checks for this document.
-    Ignoring privacy Levels could expose sensitive or confidential data
-    to an unauthorized person** and click on the **Save** button.
-
-    ![](./media/image77.png)
+6.  In the table area, you'll initially see a warning that "The
+    evaluation was canceled because combining data from multiple sources
+    may reveal data from one source to another. Select continue if the
+    possibility of revealing data is okay." Select **Continue** to
+    display the combined data.
 
     ![A screenshot of a computer Description automatically
-    generated](./media/image78.png)
+    generated](./media/image72.png)
 
-    ![A screenshot of a computer Description
-    automatically generated](./media/image79.png)
+7.  In Privacy Levels dialog box, select the **check box :Ignore Privacy
+    Levels checks for this document. Ignoring privacy Levels could
+    expose sensitive or confidential data to an unauthorized person**
+    and click on the **Save** button.
+
+    ![A screenshot of a computer Description automatically
+    generated](./media/image73.png)
+
+    ![A screenshot of a computer Description automatically
+    generated](./media/image74.png)
 
 8.  Notice how a new query was created in Diagram view showing the
     relationship of the new Merge query with the two queries you
     previously created. Looking at the table pane of the editor, scroll
     to the right of the Merge query column list to see a new column with
     table values is present. This is the "Generated NYC
-    Taxi-Green-Discounts" column, and its type is **\[Table\]**. In the
-    column header there's an icon with two arrows going in opposite
-    directions, allowing you to select columns from the table. Deselect
-    all of the columns except **Discount**, and then select **OK**.
+    Taxi-Green-Discounts" column, and its type is **\[Table\]**.
 
-    ![](./media/image80.png)
+    In the column header there's an icon with two arrows going in opposite
+    directions, allowing you to select columns from the table. Deselect all
+    of the columns except **Discount**, and then select **OK**.
+
+    ![A screenshot of a computer Description automatically
+    generated](./media/image75.png)
 
 9.  With the discount value now at the row level, we can create a new
     column to calculate the total amount after discount. To do so,
     select the **Add column** tab at the top of the editor, and
     choose **Custom column** from the **General** group.
 
-    ![](./media/image81.png)
+    ![A screenshot of a computer Description automatically
+    generated](./media/image76.png)
 
-10. On the **Custom column** dialog, you can use the Power Query
+10. On the **Custom column** dialog, you can use the [Power Query
     formula language (also known as
     M) to define how
     your new column should be calculated.
-    Enter +++**TotalAfterDiscount+++** for the **New column name**,
+    Enter +++**TotalAfterDiscount**+++ for the **New column name**,
     select **Currency** for the **Data type**, and provide the following
     M expression for the **Custom column formula**:
 
-    *+++if \[totalAmount\] \> 0 then \[totalAmount\] \* ( 1 -\[Discount\]
-    ) else \[totalAmount\]+++*
+    +++if [totalAmount] > 0 then [totalAmount] * ( 1 -[Discount] ) else [totalAmount]+++
 
     Then select **OK**.
-    
-    ![](./media/image82.png) 
 
     ![A screenshot of a computer Description automatically
-    generated](./media/image83.png)
+    generated](./media/image77.png)
 
-11. Select the newly
-    create **TotalAfterDiscount** column and then select
-    the **Transform** tab at the top of the editor window. On
+    ![A screenshot of a computer Description automatically
+    generated](./media/image78.png)
+
+11. Select the newly create **TotalAfterDiscount** column and then
+    select the **Transform** tab at the top of the editor window. On
     the **Number column** group, select the **Rounding** drop down and
     then choose **Round...**.
 
-    ![](./media/image84.png)
+    **Note**: If you can’t find the **rounding** option, expand the menu to
+    see **Number column**.
 
-12. On the **Round** dialog, enter **2** for the
+    ![A screenshot of a computer Description automatically
+    generated](./media/image79.png)
+
+    ![A screenshot of a computer Description automatically
+    generated](./media/image80.png)
+
+12. On the **Round** dialog, enter +++**2**+++ for the
     number of decimal places and then select **OK**.
 
-    ![](./media/image85.png)
+    ![](./media/image81.png)
 
-13. Change the data type of the **IpepPickupDatetime** from **Date** to
-    **Date/Time**.
+13. Change the data type of the
+    **IpepPickupDatetime** from **Date** to **Date/Time**.
 
-    ![](./media/image86.png)
-    
-    ![A screenshot of a computer Description
-    automatically generated](./media/image87.png)
+    ![A screenshot of a computer Description automatically
+    generated](./media/image82.png)
 
-14. Finally, expand the **Query settings** pane
-    from the right side of the editor if it isn't already expanded, and
-    rename the query from **Merge** to **Output**.
+    ![](./media/image83.png)
 
-    ![](./media/image88.png)
+14. Finally, expand the **Query settings** pane from the right side of
+    the editor if it isn't already expanded, and rename the query
+    from **Merge** to **Output**.
 
-    ![](./media/image89.png)
+    ![A screenshot of a computer Description automatically
+    generated](./media/image84.png)
+
+    ![A screenshot of a computer Description automatically
+    generated](./media/image85.png)
 
 **Task 8: Load the output query to a table in the Lakehouse**
 
 With the output query now fully prepared and with data ready to output,
 we can define the output destination for the query.
 
-1.  Select the **Output** merge query created
-    previously. Then select the **Home** tab in the editor, and from the
-    **Default data destination** drop-down, select **Add** option**.**
+1.  Select the **Output** merge query created previously. Then select
+    the **+ icon** to add **data destination** to this Dataflow.
 
-    ![](./media/image90.png)
+    ![A screenshot of a computer Description automatically
+    generated](./media/image86.png)
 
-2.  On Choose data destination page, search and
-    select **Lakehouse** option
+2.  From data destination list, select **Lakehouse** option under the
+    New destination.
 
-    ![](./media/image91.png)
+    ![A screenshot of a computer Description automatically
+    generated](./media/image87.png)
 
 3.  On the **Connect to data destination** dialog, your connection
     should already be selected. Select **Next** to continue.
 
     ![A screenshot of a computer Description automatically
-    generated](./media/image92.png)
+    generated](./media/image88.png)
 
 4.  On the **Choose destination target** dialog,
     browse to the Lakehouse where you wish to load the data and name the
     new table+++ **nyc_taxi_with_discounts+++**, then
     select **Next** again.
 
-    ![](./media/image93.png)
+    ![](./media/image89.png)
 
-5.  On the **Choose destination settings** dialog, leave the
-    default **Replace** update method, double check that your columns
-    are mapped correctly, and select **Save settings**.
+5.  On the **Choose destination
+    settings** dialog, leave the default **Replace** update method,
+    double check that your columns are mapped correctly, and
+    select **Save settings**.
 
-    ![](./media/image94.png)
+    ![](./media/image90.png)
 
-6.  Back in the main editor window, confirm that
-    you see your output destination on the **Query settings** pane for
-    the **Output** table, and then select **Publish**.
-    
-    ![](./media/image95.png)
+6.  Back in the main editor window, confirm that you see your output
+    destination on the **Query settings** pane for the **Output** table
+    as **Lakehouse**, and then select **Save and Run** option from the
+    Home tab.
 
-    ![A screenshot of a computer Description automatically
-    generated](./media/image96.png)
+    ![A screenshot of a computer Description automatically generated](./media/image91.png)
+
+    ![A screenshot of a computer Description automatically generated](./media/image92.png)
 
 7.  On the workspace page, you can rename your
     dataflow by selecting the ellipsis to the right of the dataflow name
     that appears after you select the row, and choosing **Properties**.
 
-    ![](./media/image97.png)
+    ![](./media/image93.png)
 
 8.  In the **Dataflow 1** dialog box,
-    enter +++**nyc_taxi_data_with_discounts+++** in the name box, then
+    enter +++**nyc_taxi_data_with_discounts**+++ in the name box, then
     select **Save**.
 
-    ![](./media/image98.png)
+    ![](./media/image94.png)
 
 9.  Select the refresh icon for the
     dataflow after selecting its row, and when complete, you should see
@@ -690,56 +684,55 @@ we can define the output destination for the query.
     destination** settings.
 
     ![A screenshot of a computer Description automatically
-    generated](./media/image99.png)
+    generated](./media/image95.png)
 
 10. In the **Data_FactoryXX** pane, select **DataFactoryLakehouse** to view the
     new table loaded there.
 
-    ![](./media/image100.png)
+    ![](./media/image96.png)
     
-    ![](./media/image101.png)
+    ![](./media/image97.png)
 
 # Exercise 3: Automate and send notifications with Data Factory
 
 ## Task 1: Add an Office 365 Outlook activity to your pipeline
 
-1.  From **Tutorial_Lakehouse** page, navigate
-    and click on **Data_FactoryXX** Workspace on the left-sided
-    navigation menu.
+1.  Navigate and click on **Data_FactoryXX**
+    Workspace on the left-sided navigation menu.
 
-    ![](./media/image102.png)
+    ![](./media/image98.png)
 
 2.  In the **Data_FactoryXX** view, select the **First_Pipeline1**.
 
     ![A screenshot of a computer Description automatically
-    generated](./media/image103.png)
+    generated](./media/image99.png)
 
 3.  Select the **Activities** tab in the
     pipeline editor and find the **Office Outlook** activity.
 
-    ![](./media/image104.png)
+    ![](./media/image100.png)
 
 4.  Select and drag the **On success** path (a
     green checkbox on the top right side of the activity in the pipeline
     canvas) from your **Copy activity** to your new **Office 365
     Outlook** activity.
 
-    ![](./media/image105.png)
+    ![](./media/image101.png)
 
 5.  Select the Office 365 Outlook activity
     from the pipeline canvas, then select the **Settings** tab of the
     property area below the canvas to configure the email. Click on
-    **Sing in** button.
+    **Sign in** button.
 
-    ![](./media/image106.png)
+    **Note:** The service doesn't currently support personal email. You must
+    use an enterprise or personal **outlook** email address.
+
+    ![](./media/image102.png)
 
 6.  Select your Power BI organizational account
     and then select **Allow access** to confirm.
 
-    **Note:** The service doesn't currently support personal email. You must
-    use an enterprise email address.
-
-    ![](./media/image107.png)
+    ![](./media/image103.png)
 
 7.  Select the Office 365 Outlook activity from the pipeline canvas, on
     the **Settings** tab of the property area below the canvas to
@@ -752,49 +745,48 @@ we can define the output destination for the query.
       that the **Add dynamic content** option appears, and then select
       it to display the pipeline expression builder canvas.
 
-      ![](./media/image108.png)
+    ![](./media/image104.png)
 
 8.  The **Pipeline expression builder** dialog appears. Enter the
     following expression, then select **OK**:
 
-    *+++@concat('DI in an Hour Pipeline Succeeded with Pipeline Run Id',
-    pipeline().RunId)+++*
+    +++@concat('DI in an Hour Pipeline Succeeded with Pipeline Run Id', pipeline().RunId)+++
 
-    ![](./media/image109.png)
+    ![](./media/image105.png)
 
 9.  For the **Body**, select the field again and choose the **View in
     expression builder** option when it appears below the text area. Add
     the following expression again in the **Pipeline expression
     builder** dialog that appears, then select **OK**:
 
-    *+++@concat('RunID = ', pipeline().RunId, ' ; ', 'Copied rows ',
+    +++@concat('RunID = ', pipeline().RunId, ' ; ', 'Copied rows ',
     activity('Copy data1').output.rowsCopied, ' ; ','Throughput ',
-    activity('Copy data1').output.throughput)+++*
-
-    ![](./media/image110.png)
-
-    ![](./media/image111.png)
+    activity('Copy data1').output.throughput)+++
 
     ** Note:** Replace **Copy data1** with the name of your own pipeline
     copy activity.
+
+    ![](./media/image106.png)
+
+    ![](./media/image107.png)
 
 10. Finally select the **Home** tab at the top of the pipeline editor,
     and choose **Run**. Then select **Save and run** again on the
     confirmation dialog to execute these activities.
 
-    ![](./media/image112.png)
+    ![](./media/image108.png)
 
-    ![](./media/image113.png)
+    ![](./media/image109.png)
 
-    ![](./media/image114.png)
+    ![](./media/image110.png)
 
 11. After the pipeline runs successfully, check your email to find the
     confirmation email sent from the pipeline.
 
     ![A screenshot of a computer Description automatically
-    generated](./media/image115.png)
+    generated](./media/image111.png)
 
-    ![](./media/image116.png)
+    ![](./media/image112.png)
 
 **Task 2: Schedule pipeline execution**
 
@@ -804,12 +796,12 @@ it to execute automatically.
 1.  On the **Home** tab of the pipeline editor window,
     select **Schedule**.
 
-    ![](./media/image117.png)
+    ![](./media/image113.png)
 
 2.  Configure the schedule as required. The example here schedules the
     pipeline to execute daily at 8:00 PM until the end of the year.
 
-    ![](./media/image118.png)
+    ![](./media/image114.png)
 
 **Task 3: Add a Dataflow activity to the pipeline**
 
@@ -817,12 +809,11 @@ it to execute automatically.
     **Office 365 Outlook** activity on your pipeline canvas, and select
     the **+** button to insert a new activity.
 
-    ![](./media/image119.png)
+    ![](./media/image115.png)
 
-2.  Choose **Dataflow** from the menu that
-    appears.
+2.  Choose **Dataflow** from the menu thatappears.
 
-    ![](./media/image120.png)
+    ![](./media/image116.png)
 
 3.  The newly created Dataflow activity is inserted between the Copy
     activity and the Office 365 Outlook activity, and selected
@@ -831,18 +822,18 @@ it to execute automatically.
     your dataflow created in **Exercise 2: Transform data with a
     dataflow in Data Factory**.
 
-    ![](./media/image121.png)
+    ![](./media/image117.png)
 
 4.  Select the **Home** tab at the top of the
     pipeline editor, and choose **Run**. Then select **Save and
     run** again on the confirmation dialog to execute these activities.
 
-    ![](./media/image122.png)
+    ![](./media/image118.png)
 
-    ![](./media/image123.png)
+    ![](./media/image119.png)
 
     ![A screenshot of a computer Description automatically
-    generated](./media/image124.png)
+    generated](./media/image120.png)
 
 ## Task 4: Clean up resources
 
@@ -853,15 +844,15 @@ the workspace you created for this tutorial.
 1.  Select your workspace, the **Data-FactoryXX** from the left-hand
     navigation menu. It opens the workspace item view.
 
-    ![](./media/image125.png)
+    ![](./media/image121.png)
 
 2.  Select the  **Workspace settings** option on the workspace page
     located at the top right corner.
 
-        ![A screenshot of a computer Description automatically
-        generated](./media/image126.png)
+    ![A screenshot of a computer Description automatically
+    generated](./media/image122.png)
 
 3.  Select **General tab** and **Remove this workspace.**
 
     ![A screenshot of a computer Description automatically
-    generated](./media/image127.png)
+    generated](./media/image123.png)
