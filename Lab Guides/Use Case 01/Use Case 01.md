@@ -37,59 +37,64 @@ Specifically, you will:
 - **Provision a Data Warehouse** to serve as the source for your Copy
   Job.
 
-### **Task-1: Start a Fabric Free Trial**
+### **Task-1: Start a Fabric Capacity Trial**
 
 Follow these steps to start your Fabric capacity trial and become the
 Capacity administrator of that trial.
 
-1.  Open your browser, navigate to the address bar, and type or paste the following URL: !!https://app.fabric.microsoft.com/!! then press the **Enter** button.
+1.  Open your browser and browse the **Microsoft Fabric Trial Page**
+    +++https://app.fabric.microsoft.com/+++
 
-2.  In the **Microsoft Fabric** window, enter  assigned credentials,
+2.  In the **Microsoft Fabric** window, enter your given credentials,
     and click on the **Submit** button. 
-
-    ![A close up of a white and
-    green object AI-generated content may be
-    incorrect.](./media/image1.png)
+    
+    ![Fabric Sign in](./media/image1.png)
 
 3.  Then, In the **Microsoft** window enter the password and click on
     the **Sign in** button 
 
-    ![A login screen with a red box and blue text AI-generated content may
-    be incorrect.](./media/image2.png)
+    ![Fabric Sign in ](./media/image2.png)
 
 4.  In **Stay signed in?** window, click on the **Yes** button.
 
-    ![A computer screen shot of a computer error AI-generated content may
-    be incorrect.](./media/image3.png)
+    ![Fabric Sign in ](./media/image3.png)
 
-5.  You'll be redirected to the Fabric Home page. On **Fabric Home page**, click on the **Account manager** on the
+5.  On **Fabric Home** page, click on the **Account manager** on the
     right side.
 
-    ![A screenshot of a computer Description automatically
-    generated](./media/image4.png)
+    ![Account Manager](./media/image4.png)
 
-6.  On Fabric Home page, click on the **Account manager** on the right side. In the Account manager blade, navigate and select **Start trial** as shown in the below image.
+6.  In the Account manager, select **Free trial**. If you don't
+    see **Free trial** or **Start trial** or a **Trial status**, trials
+    might be disabled for your tenant.
 
-    ![A screenshot of a phone Description automatically
-    generated](./media/image5.png)
+    **Note:** If the Account manager already displays **Trial status**,
+    you may already have a **Power BI trial** or a **Fabric (Free)
+    trial** in progress. To test this out, attempt to use a Fabric
+    feature. 
+
+    ![Start Free trial](./media/image5.png)
 
 7.  If prompted, agree to the terms and select the appropriate Trial
     capacity region and then select **Activate**.
 
-    ![A screenshot of a computer screen AI-generated content may be
-    incorrect.](./media/image6.png)
+    ![Activate Free Fabric trial](./media/image6.png)
 
 8.  Once your trial capacity is ready, you receive a confirmation
     message. Select **Fabric Home Page** to begin working in Fabric.
+    You're now the Capacity administrator for that trial capacity.
 
-    ![A screenshot of a computer AI-generated content may be
-    incorrect.](./media/image7.png)
+    ![Navigate to Fabric Home Page](./media/image7.png)
 
 9.  Open your Account manager again. Notice the heading for **Trial
     status**. Your Account manager keeps track of the number of days
-    remaining in your trial. You will also see the countdown in your Fabric menu bar when you work in a product experience.
+    remaining in your trial.
 
-    ![](./media/image8.png)
+    ![Trial Status](./media/image8.png)
+
+    Congratulations. You now have a Fabric trial capacity that includes a
+    Power BI individual trial (if you didn't already have a Power
+    BI *paid* license) and a Fabric trial capacity.
 
 ### **Task-2: Create a New Workspace**
 
@@ -108,45 +113,48 @@ To create a workspace:
     |Advanced	|Under License mode, select Trial|
     |Default storage format	|Small semantic model storage format|
 
-    ![](./media/image10.png)
+    ![Workspace advanced settings](./media/image10.png)
     
-    ![](./media/image11.png)
+    ![create a workspace](./media/image11.png)
 
-    ![](./media/image12.png)
+    ![Workspace advanced settings](./media/image12.png)
+
+    **Note:** If the Trial option is not available or disabled follow the
+    steps to see the license info – After clicking on Apply option to create
+    a new workspace, navigate to the workspace settings. Select License info
+    option and in this section, you can select or change the license.
+
+    ![Workspace settings- license info](./media/image13.png)
 
 ### **Task-3: Create a Warehouse with sample data** 
 
-1.  In the **DataFactory_Fabric** Workspace
-    page, select **+New Item** and Search for the **Sample warehouse**
-    card under Store Data section. **Please note that you need to go for the Sample Warehouse here.**
+1.  In the **DataFactory_Fabric** Workspace page, select **+New Item** and Look
+    for the **Sample warehouse** card under Store Data section**.**
 
-    ![](./media/image13.png)
+    ![Create sample warehouse](./media/image14.png)
 
-2.  On the **New warehouse** dialog, provide a
-    name for your warehouse as +++**Warehouse-DF**+++ and click on the
-    **Create** button.
+2.  On the **New warehouse** dialog, provide a name for your warehouse as
+    +++**Warehouse-DF**+++ and click on the **Create** button.
 
-    ![](./media/image14.png)
+    ![create new warehouse](./media/image15.png)
 
-3.  The create action creates a new
-    **Warehouse** and start loading **sample data** into it. The data
-    loading takes few minutes to complete.
+3.  The create action creates a new **Warehouse** and start loading **sample data**
+    into it. The data loading takes few minutes to complete.
 
-    ![](./media/image15.png)
+    ![Sample data loading in warehouse](./media/image16.png)
 
 4.  On completion of loading sample data, the warehouse opens with
     sample data loaded into tables and views to query.
 
-    ![](./media/image16.png)
+    ![Sample data loaded](./media/image17.png)
 
 ## Exercise 2 - Create a Copy job in Data Factory
 
 In this exercise, you will learn how to:
 
-- Define and configure **source and destination datasets.**
+- Define and configure **source and destination data stores.**
 
-- Set up a **Copy activity pipeline** using the intuitive, code-free
-  interface.
+- Set up a **Copy job** using the intuitive, code-free interface.
 
 - Customize settings like **column mappings, data filters, and file
   formats.**
@@ -158,71 +166,80 @@ Complete the following steps to create a new Copy job:
 1.  Navigate to the existing workspace i.e., **DataFactory_Fabric**
     page.
 
-    ![](./media/image17.png)
+    ![Navigate to workspace page](./media/image18.png)
 
-2.  Select **+ New item** option and choose the
-    **Copy job** card to create a new Copy job.
+2.  Select **+ New item** option and choose the **Copy job** card to create a new Copy job.
 
-    ![](./media/image18.png)
+    ![create new copy job ](./media/image19.png)
 
-3.  Assign a name to the new job i.e., +++Copyjob-DF+++, then select **Create**.
+3.  Assign a name to the new copy job as +++**Copyjob-DF**+++, then
+    select **Create**.
 
-    ![A screenshot of a computer Description automatically
-    generated](./media/image19.png)
+    ![New copy job](./media/image20.png)
 
-4.  For this lab, we are considering
-    **Warehouse** as the **data source** which we have created
-    initially. Hence, Choose the data stores as **Warehouse-DF** to copy
+4.  For this lab, we are considering **Warehouse** as the **data
+    source** which we have created initially. Hence, Look for the data
+    store from **OneLake catalog** and select **Warehouse-DF** to copy
     data from.
 
-    ![](./media/image20.png)
+    ![Choose data source](./media/image21.png)
 
 5.  Select the **tables** and **columns** you wish to copy by selecting
-    the **checkboxes**. You can remove the views represented with a
-    different symbol as shown below. Click on **Next**.
+    the **checkboxes**. Find and remove the below listed **views**
+    represented with a different symbol as shown in the below image:
 
-    ![](./media/image21.png)
+    - dbo.vw_PaymentAnalysis
 
-6.  For this lab, we are considering
-    **Lakehouse** as the **data destination**. So, to create a new
-    lakehouse for copying the data from the data source to this
-    lakehouse using copy job, select your **destination store** as
+    - queryinsights.exec_requests_history
+
+    - queryinsights.exec_sessions_history
+
+    - queryinsights.frequently_run_queries
+
+    - queryinsights.long_running_queries
+
+    Click on **Next**.
+
+    ![Preview and choose data](./media/image22.png)
+
+6.  For this lab, we are
+    considering **Lakehouse** as the **data destination**. So, to create
+    a new lakehouse for copying the data from the data source to this
+    lakehouse using copy job, select your **data** **destination** as
     **Lakehouse** under **New Fabric** item.
 
-    ![](./media/image22.png)
+    ![Choose data destination](./media/image23.png)
 
-7.  Select the **Workspace** name from the
-    drop-down and provide a name to the **lakehouse** as
+7.  Select the **Workspace**
+    name from the drop-down and provide a name to the **lakehouse** as
     +++**Lakehouse_DF**+++.
 
-    ![](./media/image23.png)
+    ![Create new lakehouse](./media/image24.png)
 
-8.  You can configure table or column
-    mapping using **Edit** column mapping option. Here, it is not
+8.  You can configure table or
+    column mapping using **Edit** column mapping option. Here, it is not
     required. Click on **Next** button.
 
-    ![A screenshot of a computer Description automatically
-    generated](./media/image24.png)
+    ![Map to destination](./media/image25.png)
 
 9.  Choose the copy mode, either a one-time full data copy, or
     continuous incremental copying. For this lab, we are moving ahead
     with **full copy** option. Click on **Next**.
 
-    ![A screenshot of a computer Description automatically
-    generated](./media/image25.png)
+    ![Copy Job Settings](./media/image26.png)
 
-10. Review the **copy** **job summary**
-    and save it.
+10. Review the **copy** **job summary** and check the checkbox for
+    **start data transfer immediately**. Moreover, under **Run options**
+    section, select **Run once** option. Click on **Save + Run** button.
 
-    ![A screenshot of a computer Description automatically
-    generated](./media/image26.png)
+    ![Review and Save Copy Job](./media/image27.png)
 
-11. In the Copy job panel, you can modify,
-    execute, and track the job's status. The **inline monitoring** panel
-    displays row counts read/written for the latest runs only. The
-    successful completion will take 4-5 mins.
+11. In the Copy job panel,
+    you can modify, execute, and track the job's status. The **inline
+    monitoring** panel displays row counts read/written for the latest
+    runs only. The successful completion will take 4-5 mins.
 
-    ![](./media/image27.png)
+    ![Monitor Run History](./media/image28.png)
 
 ## Exercise 3 – Monitor a Copy job in Data Factory 
 
@@ -238,36 +255,53 @@ In this exercise, you will learn how to:
 
 Follow these steps to monitor a copy job in copy job panel.
 
-1.  Select **More** to see more details about the job, including the run
-    ID, which is useful if you need to create a support ticket.
+1.  After you initiate a Copy job, you can immediately track its
+    progress and metrics in its job panel. The display consistently
+    shows data from the most recent runs, reporting on the following
+    metrics:
 
-    ![](./media/image29.png)
+    - Status
+
+    - Row read
+
+    - Row written
+
+    - Throughput
+
+    Select **More** to see more details about the job such as start time,
+    end time and the run ID.
+
+    ![Copy job run details](./media/image29.png)
     
-    ![](./media/image28.png)
+    ![Monitor Copy job panel](./media/image30.png)
 
 2.  You can also select **View run history** to see a list of prior
     runs.
 
-    ![](./media/image31.png)
-    
-    ![](./media/image30.png)
+    ![View Run History](./media/image31.png)
+
+    ![Recent run for Copy job](./media/image32.png)
 
 ### **Task-2: Monitor in the Monitoring Hub**
 
-The Monitoring hub serves as a central portal for overseeing Copy job
-runs across different items. There are two ways to access the Monitoring
-hub.
+The Monitoring hub serves as a central portal for overseeing all your
+Copy job runs. There are two ways to access the Monitoring hub.
 
 1.  When you select the **View run history** button on the Copy job
     panel Results area to view the recent runs for your job, you can
     select **Go to Monitor**.
 
-    ![](./media/image32.png)
+    ![Recent runs for Copy job](./media/image33.png)
 
-2.  This will navigate you to the **Monitoring
-    hub**, where you can see a list of all Copy jobs and their runs.
+2.  This will navigate you to the **Monitoring hub**, where you can see
+    a list of Copy jobs and their runs.
 
-    ![](./media/image33.png)
+    ![Monitor Pane](./media/image34.png)
+
+3.  Select the Copy job name – **Copyjob-DF** to view its details,
+    including source, destination, duration, and data read and written.
+
+    ![Monitor pane details](./media/image35.png)
 
 ## Summary
 
