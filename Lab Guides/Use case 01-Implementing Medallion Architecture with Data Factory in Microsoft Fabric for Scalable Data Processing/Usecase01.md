@@ -1488,6 +1488,7 @@ incorrect.](./media/image144.png)
      ![A screenshot of a computer AI-generated content may be incorrect.](./media/image226.png)
   
      ![A screenshot of a computer AI-generated content may be incorrect.](./media/image227.png)
+9. In **PowerBI** page, select **File** and click on **Save** 
   
      ![A screenshot of a computer AI-generated content may be incorrect.](./media/image228.png)
     
