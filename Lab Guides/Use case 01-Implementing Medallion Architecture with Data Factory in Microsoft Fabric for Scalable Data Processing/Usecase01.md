@@ -230,12 +230,12 @@ reports.
     edited directly to ensure the data copy activity is correctly set up
     and aligned with specific requirements.
 
-   ![A screenshot of a computer AI-generated content may be incorrect.](./media/image28.png)
+    ![A screenshot of a computer AI-generated content may be incorrect.](./media/image28.png)
 
 3.  Next, from the **Home** tab on the ribbon, select
     the **Validate** option.
 
-   ![A screenshot of a computer AI-generated content may be incorrect.](./media/image29.png)
+    ![A screenshot of a computer AI-generated content may be incorrect.](./media/image29.png)
 
     This step is important to ensure that the entire pipeline (in this
     sample, just the Copy activity) is valid. In the Pipeline validation
@@ -276,9 +276,9 @@ reports.
     data, helping confirm that the ingestion process was completed
     correctly.
 
-   ![A screenshot of a computer AI-generated content may be incorrect.](./media/image35.png)
+    ![A screenshot of a computer AI-generated content may be incorrect.](./media/image35.png)
  
-   ![A screenshot of a computer AI-generated content may be incorrect.](./media/image36.png)
+    ![A screenshot of a computer AI-generated content may be incorrect.](./media/image36.png)
 
 ## Task 5: Pipeline expression builder
 
