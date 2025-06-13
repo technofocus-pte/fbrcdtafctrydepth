@@ -79,7 +79,7 @@ reports.
 
     |  |   |
     |----|---|
-    |Name |**+++Digital twin builderXX+++** (XX can be a unique number) |
+    |Name |**+++Data Factory-MedallionXX+++** (XX can be a unique number) |
     |Advanced |  Under License mode, select **Trial**|
     |Default | storage format Small dataset storage format|
 
