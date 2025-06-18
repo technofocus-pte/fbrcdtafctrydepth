@@ -80,7 +80,7 @@ reports.
     |  |   |
     |----|---|
     |Name |**+++Data Factory-MedallionXX+++** (XX can be a unique number) |
-    |Advanced |  Under License mode, select **Trial**|
+    |Advanced |  Under License mode, select **fabric capactiy**|
     |Default | storage format Small dataset storage format|
 
      ![](./media/image235.png)
