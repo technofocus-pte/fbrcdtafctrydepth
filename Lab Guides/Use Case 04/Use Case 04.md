@@ -41,14 +41,12 @@ trial enabled.
     |   |    |
     |-----|-----|
     |Workspace Name|	Enter a unique name as +++Data-Factory67+++|
-    |Advanced	|Under License mode, select Trial|
+    |Advanced	|Under License mode, select fabric capacity|
     |Default storage format	|Small semantic model storage format|
 
-    ![A screenshot of a computer Description automatically generated](./media/image2.png)
+    ![A screenshot of a computer Description automatically generated](./media/image124.png)
 
-    ![A screenshot of a computer Description automatically generated](./media/image3.png)
-
-    ![](./media/image4.png)
+    ![A screenshot of a computer Description automatically generated](./media/image125.png)
 
 3.  Wait for the deployment to complete. It’ll take approximately 2-3
     minutes.
