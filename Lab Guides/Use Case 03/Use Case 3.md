@@ -221,8 +221,7 @@ You can now commit changes to Git, as described here:
 
 ## Exercise 5 – Get Started with deployment pipelines for Git
 
-    ![Diagram showing how the Git based deployment
-    works.](./media/image31.png)
+    ![](./media/image48.png)
 
 The objective of this exercise is to help you understand how to
 **configure and use deployment pipelines with Git-enabled workspaces**
@@ -358,7 +357,7 @@ deployed to the next stage.
 1.  You can review the **deployment history** to
     see the last time content was deployed to each stage. To examine the
     differences between the two pipelines before you deploy,
-    see and compare content in different deployment
+    see and compare the content in different deployment
     stages.
     ![](./media/image46.png)
     
