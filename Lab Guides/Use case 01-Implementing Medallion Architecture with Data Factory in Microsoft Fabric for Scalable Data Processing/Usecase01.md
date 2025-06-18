@@ -83,11 +83,9 @@ reports.
     |Advanced |  Under License mode, select **Trial**|
     |Default | storage format Small dataset storage format|
 
-     ![](./media/image4.png)
+     ![](./media/image235.png)
     
-    ![](./media/image5.png)
-    
-     ![](./media/image6.png)
+    ![](./media/image236.png)
 
 ## Task 2: Medallion task flow
 
