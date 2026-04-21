@@ -474,7 +474,7 @@ incorrect.](https://raw.githubusercontent.com/technofocus-pte/fbrcdtafctrydepth/
     select **Currency** for the **Data type**, and provide the following
     M expression for the **Custom column formula**:
 
-	+++if [tolls_amount]  0 then [tolls_amount] * ( 1 - [Discount] ) else [tolls_amount]+++
+	+++if [tolls_amount] > 0 then [tolls_amount] * ( 1 - [Discount] ) else [tolls_amount]+++
 
 	Then select **OK**.
 
