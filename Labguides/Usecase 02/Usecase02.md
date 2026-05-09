@@ -121,117 +121,141 @@ along with additional CSV files. This establishes your raw dataset
 foundation inside Fabric, enabling you to start transformations and
 queries later.
 
-1.  Create a new lakehouse by clicking on the **+New item** button in
+1.  Create a new lakehouse by clicking on the **+New item** button in
     the navigation bar.
 
-    ![A screenshot of a computer AI-generated content may be
-incorrect.](https://raw.githubusercontent.com/technofocus-pte/fbrcdtafctrydepth/refs/heads/Cloud-slice-December2025/Labguides/Usecase%2002/media/image9.png)
+![A screenshot of a computer AI-generated content may be
+incorrect.](./media/img1.png)
 
-2.  On the **Filter by item type** search box,
-    enter +++Lakehouse+++ and select the lakehouse item.
+2.  On the **Filter by item type** search box, enter +++Lakehouse+++ and
+    select the lakehouse item.
 
-    ![A screenshot of a computer AI-generated content may be
-incorrect.](https://raw.githubusercontent.com/technofocus-pte/fbrcdtafctrydepth/refs/heads/Cloud-slice-December2025/Labguides/Usecase%2002/media/image10.png)
+![A screenshot of a computer AI-generated content may be
+incorrect.](./media/img2.png)
 
-3.  On the **New lakehouse** dialog box,
-    enter +++datafactory_lakehouse+++ in the **Name** field, click
-    on the **Create** button and open the new lakehouse.
+3.  On the **New lakehouse** dialog box, enter
+    +++datafactory_lakehouse+++ in the **Name** field, click on
+    the **Create** button and open the new lakehouse.
 
-	**Note**: Ensure to remove space before **datafactory_lakehouse**.
+**Note**: Ensure to remove space before **datafactory_lakehouse**.
 
-    ![A screenshot of a computer AI-generated content may be
-incorrect.](https://raw.githubusercontent.com/technofocus-pte/fbrcdtafctrydepth/refs/heads/Cloud-slice-December2025/Labguides/Usecase%2002/media/image11.png)
+![A screenshot of a computer AI-generated content may be
+incorrect.](./media/img3.png)
 
-    ![A screenshot of a computer AI-generated content may be
-incorrect.](https://raw.githubusercontent.com/technofocus-pte/fbrcdtafctrydepth/refs/heads/Cloud-slice-December2025/Labguides/Usecase%2002/media/image12.png)
+![](./media/img4.png)
 
-4.  Wait for the notification stating **Successfully created SQL
+4.  Wait for the notification stating **Successfully created SQL
     endpoint**.
 
-    ![A screenshot of a computer AI-generated content may be
-incorrect.](https://raw.githubusercontent.com/technofocus-pte/fbrcdtafctrydepth/refs/heads/Cloud-slice-December2025/Labguides/Usecase%2002/media/image13.png)
+![A screenshot of a computer AI-generated content may be
+incorrect.](./media/img5.png)
 
-5.  From the **lakehouse** home page, select **Start with sample data**
-    to view the sample data list and load the lakehouse with the
-    built-in sample dataset. Using sample data provides a quick starting
-    point without needing raw data files.
+5.  From the **lakehouse** home page, select **Upload files** 
 
-    ![A screenshot of a computer AI-generated content may be
-incorrect.](https://raw.githubusercontent.com/technofocus-pte/fbrcdtafctrydepth/refs/heads/Cloud-slice-December2025/Labguides/Usecase%2002/media/image14.png)
+![](./media/img6.png)
 
-6.  The **Use a sample** dialog is displayed, select the **NYCTaxi**
-    sample data tile.The NYCTaxi sample gives realistic,
-    schema-consistent data, so you can focus on transformations rather
-    than building data from scratch.
+6.  On the Upload files tab, click on the **folder** under the Files
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/fbrcdtafctrydepth/refs/heads/Cloud-slice-December2025/Labguides/Usecase%2002/media/image15.png)
+![](./media/img7.png)
 
-    ![A screenshot of a computer AI-generated content may be
-incorrect.](https://raw.githubusercontent.com/technofocus-pte/fbrcdtafctrydepth/refs/heads/Cloud-slice-December2025/Labguides/Usecase%2002/media/image16.png)
+7.  Browse to **C:\LabFiles\NYCTaxi** folder on your VM, then
+    select **all** file and click on **Open** button.
 
-    ![A screenshot of a computer AI-generated content may be
-incorrect.](https://raw.githubusercontent.com/technofocus-pte/fbrcdtafctrydepth/refs/heads/Cloud-slice-December2025/Labguides/Usecase%2002/media/image17.png)
+![](./media/img8.png)
 
-7.  From the **Home** tab of the **Lakehouse,** select **Get
-    data** **Upload files**.
+8.  Click and select refresh on the **Files**. The file appears.
 
-    ![A screenshot of a computer AI-generated content may be
-incorrect.](https://raw.githubusercontent.com/technofocus-pte/fbrcdtafctrydepth/refs/heads/Cloud-slice-December2025/Labguides/Usecase%2002/media/image18.png)
+![](./media/img9.png)
 
-5.  On the **Upload files** pane that appears on the right side, select
-    the **folder icon** under the **Files/** and then browse
-    to **C:\LabFiles\Labfiles** and then select
-    the **NYC-Taxi-Green-Discounts** file and click on
-    the **Upload** button.
+9.  **Close** the Upload files pane.
 
-    ![A screenshot of a computer AI-generated content may be
-incorrect.](https://raw.githubusercontent.com/technofocus-pte/fbrcdtafctrydepth/refs/heads/Cloud-slice-December2025/Labguides/Usecase%2002/media/image19.png)
+![](./media/img10.png)
 
-    ![A screenshot of a computer AI-generated content may be
-incorrect.](https://raw.githubusercontent.com/technofocus-pte/fbrcdtafctrydepth/refs/heads/Cloud-slice-December2025/Labguides/Usecase%2002/media/image20.png)
+10. Click and select refresh on the **Files**. The file appears.
 
-6.  On the Upload folder pane, click **Upload**.
+![](./media/img11.png)
 
-	>[!Alert] If the **Files** folder shows a failed state, wait a minute and refresh the browser.
+11. In the **Lakehouse** page, navigate and click on **Open
+    notebook** drop in the command bar, then select **New notebook**.
 
-    ![A screenshot of a computer AI-generated content may be
-incorrect.](https://raw.githubusercontent.com/technofocus-pte/fbrcdtafctrydepth/refs/heads/Cloud-slice-December2025/Labguides/Usecase%2002/media/image21.png)
+![](./media/img12.png)
 
-7.  After the files have been uploaded **close** the **Upload
-    folder** pane.
+12. Update the code in the **cell** with the following code and click
+    on **▷ Run cell** that appears to the left of the cell upon hover.
 
-    ![A screenshot of a computer AI-generated content may be
-incorrect.](https://raw.githubusercontent.com/technofocus-pte/fbrcdtafctrydepth/refs/heads/Cloud-slice-December2025/Labguides/Usecase%2002/media/image22.png)
+```
+# Mapping of parquet files to table names
+file_table_mapping = {
+    "Files/part-00000-29741df6-8120-43d8-87b9-cde998ce283d-c000.snappy.parquet": "green_tripdata_2020",
 
-8.  Expand **Files** and select the **NYC-Taxi-Green-Discounts** file
-    and verify that the CSV files have been uploaded.
+    "Files/part-00000-8601e1f7-764e-4adb-908e-55bb04c295bf-c000.snappy.parquet": "green_tripdata_2021",
 
-    ![A screenshot of a computer AI-generated content may be
-incorrect.](https://raw.githubusercontent.com/technofocus-pte/fbrcdtafctrydepth/refs/heads/Cloud-slice-December2025/Labguides/Usecase%2002/media/image23.png)
+    "Files/part-00000-90045a1e-33b0-441f-a499-ad290b5d7c1f-c000.snappy.parquet": "green_tripdata_2019",
 
-9.  On the **Lakehouse** page, under the Explorer pane, select
-    **Files**. Now, hover your mouse
-    to **NYC-Taxi-Green-Discounts.csv** file. Click on the horizontal
-    ellipses **(…)** beside **NYC-Taxi-Green-Discounts**.csv. Navigate
-    and click on **Load Table**, then select **New table**.
+    "Files/part-00000-907cea6d-0f54-4639-9a14-042dc04185ef-c000.snappy.parquet": "green_tripdata_2017",
 
-    ![A screenshot of a computer AI-generated content may be
-incorrect.](https://raw.githubusercontent.com/technofocus-pte/fbrcdtafctrydepth/refs/heads/Cloud-slice-December2025/Labguides/Usecase%2002/media/image24.png)
+    "Files/part-00000-93b796dc-08a7-425c-a8a7-f91632812ae9-c000.snappy.parquet": "green_tripdata_2022",
 
-    ![A screenshot of a computer AI-generated content may be
-incorrect.](https://raw.githubusercontent.com/technofocus-pte/fbrcdtafctrydepth/refs/heads/Cloud-slice-December2025/Labguides/Usecase%2002/media/image25.png)
+    "Files/part-00000-d0796a0d-acb6-427f-a974-ccad81f964da-c000.snappy.parquet": "green_tripdata_2018"
+}
 
-10. On the **Load file to new table** dialog box, and click on
-    the **Load** button.
+# Loop through all mappings
+for file_path, table_name in file_table_mapping.items():
 
-    ![A screenshot of a computer AI-generated content may be
-incorrect.](https://raw.githubusercontent.com/technofocus-pte/fbrcdtafctrydepth/refs/heads/Cloud-slice-December2025/Labguides/Usecase%2002/media/image26.png)
+    print(f"Loading {file_path} -> {table_name}")
 
-    ![A screenshot of a computer AI-generated content may be
-incorrect.](https://raw.githubusercontent.com/technofocus-pte/fbrcdtafctrydepth/refs/heads/Cloud-slice-December2025/Labguides/Usecase%2002/media/image27.png)
+    # Read parquet file
+    df = spark.read.parquet(file_path)
 
-    ![A screenshot of a computer AI-generated content may be
-incorrect.](https://raw.githubusercontent.com/technofocus-pte/fbrcdtafctrydepth/refs/heads/Cloud-slice-December2025/Labguides/Usecase%2002/media/image28.png)
+    # Write as Delta Lakehouse table
+    df.write.format("delta") \
+        .mode("overwrite") \
+        .saveAsTable(table_name)
+
+    print(f"Created table: {table_name}")
+
+print("All parquet files loaded successfully.")
+```
+
+![](./media/img13.png)
+
+![](./media/img14.png)
+
+13. After executing the notebook, refresh the **Tables** section in the
+    Lakehouse Explorer to view the newly created tables from the Parquet
+    files.
+
+![](./media/img15.png)
+
+![](./media/img16.png)
+
+14. From the left menu, select workspace icon and then select
+    **datafactory_lakehouse** lakehouse name.
+
+![](./media/img17.png)
+
+![](./media/img18.png)
+
+15. On the **Lakehouse** page, under the Explorer pane,
+    select **Files**. Now, hover your mouse
+    to **NYC-Taxi-Green-Discounts.csv** file. Click on the horizontal
+    ellipses **(…)** beside **NYC-Taxi-Green-Discounts**.csv. Navigate
+    and click on **Load Table**, then select **New table**.
+
+![](./media/img19.png)
+
+![](./media/img20.png)
+
+16. On the **Load file to new table** dialog box, and click on
+    the **Load** button.
+
+![A screenshot of a computer AI-generated content may be
+incorrect.](./media/img21.png)
+
+![A screenshot of a computer AI-generated content may be
+incorrect.](./media/img22.png)
+
+![](./media/img23.png)
 
 ## Task 3: Create new Dataflow Gen2 with sample data
 
