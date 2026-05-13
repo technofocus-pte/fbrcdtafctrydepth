@@ -158,10 +158,7 @@ incorrect.](./media/img5.png)
 
 ![](./media/img7.png)
 
-7.  Browse to **C:\LabFiles\NYCTaxi** folder on your VM, then
-    select **all** file and click on **Open** button.
-
-![](./media/img8.png)
+7.  Browse to https://github.com/technofocus-pte/Fabric-Labfiles/tree/main/Labfile, download the NYCTaxi.zip file to your VM, extract the file, then select all the extracted files and click the Open button.
 
 8.  Click and select refresh on the **Files**. The file appears.
 
