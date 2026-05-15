@@ -256,9 +256,7 @@ incorrect.](https://raw.githubusercontent.com/technofocus-pte/fbrcdtafctrydepth/
     ![A screenshot of a computer AI-generated content may be
     incorrect.](https://raw.githubusercontent.com/technofocus-pte/fbrcdtafctrydepth/refs/heads/Cloud-slice-December2025/Labguides/Usecase%2001/media/image41.png)
 
-14. On the **Upload blob** pane, click on **Browse for file**, navigate
-    to **C:\Labfiles** location and select **ContosoSales.zip**, then
-    click on the **Open** button.
+14. Browse to +++https://github.com/technofocus-pte/Fabric-Labfiles/tree/main/Labfile+++, download the **ContosoSales.zip** file to your VM, extract the file, then select all the extracted files and click the Open button.
 
     ![A screenshot of a computer AI-generated content may be
 incorrect.](https://raw.githubusercontent.com/technofocus-pte/fbrcdtafctrydepth/refs/heads/Cloud-slice-December2025/Labguides/Usecase%2001/media/image42.png)
