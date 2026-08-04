@@ -1,3 +1,14 @@
+---
+lab:
+  title: 'Use case 01: Implementing Medallion Architecture with Data Factory in Microsoft Fabric for Scalable Data Processing'
+  description: You, as a Data Engineer at Contoso Retail, are tasked with implementing Medallion Architecture in Microsoft Fabric. You collaborated with the solution architect, BI developers, and governance team to deliver a unified data pipeline from ingestion to reporting with the following objectives.
+  duration: 5 minutes
+  level: 400
+  islab: true
+  primarytopics:
+    - Microsoft Fabric
+---
+
 
 # Use case 01: Implementing Medallion Architecture with Data Factory in Microsoft Fabric for Scalable Data Processing
 
