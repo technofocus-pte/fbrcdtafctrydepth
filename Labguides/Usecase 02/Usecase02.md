@@ -1,3 +1,17 @@
+---
+lab:
+  title: 'Use Case 2: Standalone Dataflow and Deployment Components'
+  description: In this lab, you explored the full lifecycle of building, automating, and deploying data solutions in Microsoft Fabric using Dataflow Gen2, pipelines, deployment pipelines, and Git-based CI/CD integration. You began by creating a Fabric workspace, ingesting sample NYC Taxi data into a lakehouse, and building a Dataflow Gen2 with transformations, merges, parameters, and automated refreshes. Next, you advanced to pipelines, configuring copy jobs, building parameterized templates, integrating Apache Airflow, scheduling runs, and monitoring execution results. Variable Libraries were then introduced to dynamically manage environment-specific values for Dev, Test, and Prod, enhancing pipeline flexibility and deployment readiness. The lab continued with connecting Fabric to GitHub, creating repositories and tokens, and synchronizing workspaces for version control, laying the foundation for CI/CD workflows. You further extended Git integration by setting up Azure DevOps projects, linking them to Fabric workspaces, and practicing pull request–based branching strategies. Finally, you implemented deployment pipelines to move content across Development, Test, and Production stages in a controlled, versioned, and auditable process. Through these exercises, you gained hands-on experience in data ingestion, transformation, and preparation with Dataflow Gen2, orchestration and automation with pipelines and Airflow, flexible deployments using variable libraries, enterprise-grade CI/CD with GitHub and Azure DevOps, and controlled release management via deployment pipelines. Collectively, the lab provided a comprehensive understanding of how Microsoft Fabric supports modern data engineering, automation, and DevOps practices—from raw ingestion to production deployment.
+  duration: 5 minutes
+  level: 400
+  islab: true
+  primarytopics:
+    - Azure
+    - Azure DevOps
+    - GitHub
+    - Microsoft Fabric
+---
+
 
 # Use Case 2: Standalone Dataflow and Deployment Components
 
